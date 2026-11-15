@@ -1,0 +1,44 @@
+---
+source: tests/terminal_layout.rs
+assertion_line: 226
+expression: text
+---
+cnpg-watch | ctx fixture | ns app-db
+app-db/payments > Backups > backup-1
+┌Backup detail─────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│Snapshot at 1000 ms; scope 1                                                                                          │
+│                                                                                                                      │
+│phase: failed                                                                                                         │
+│method: plugin                                                                                                        │
+│Restore validity unknown                                                                                              │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+Esc back | j/k scroll | q quit

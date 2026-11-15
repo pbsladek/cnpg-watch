@@ -1,0 +1,162 @@
+[
+  {
+    "bundle": "capabilities",
+    "bytes": 2604,
+    "db_execution_ms": 0.219,
+    "db_planning_ms": 0.313,
+    "full_round_trip_ms": 36.82525,
+    "pod": "cnpg-watch-e2e/payments-1"
+  },
+  {
+    "bundle": "fast",
+    "bytes": 782,
+    "db_execution_ms": 0.237,
+    "db_planning_ms": 0.417,
+    "full_round_trip_ms": 34.646125,
+    "pod": "cnpg-watch-e2e/payments-1"
+  },
+  {
+    "bundle": "fast_basic",
+    "bytes": 645,
+    "db_execution_ms": 0.213,
+    "db_planning_ms": 0.315,
+    "full_round_trip_ms": 33.109208,
+    "pod": "cnpg-watch-e2e/payments-1"
+  },
+  {
+    "bundle": "medium",
+    "bytes": 953,
+    "db_execution_ms": 0.588,
+    "db_planning_ms": 0.499,
+    "full_round_trip_ms": 34.057959,
+    "pod": "cnpg-watch-e2e/payments-1"
+  },
+  {
+    "bundle": "deep",
+    "bytes": 1248,
+    "db_execution_ms": 0.273,
+    "db_planning_ms": 0.397,
+    "full_round_trip_ms": 32.363667,
+    "pod": "cnpg-watch-e2e/payments-1"
+  },
+  {
+    "bundle": "deep_text",
+    "bytes": 1310,
+    "db_execution_ms": 0.336,
+    "db_planning_ms": 0.418,
+    "full_round_trip_ms": 212.07483299999998,
+    "pod": "cnpg-watch-e2e/payments-1"
+  },
+  {
+    "bundle": "capabilities",
+    "bytes": 2603,
+    "db_execution_ms": 0.238,
+    "db_planning_ms": 0.336,
+    "full_round_trip_ms": 197.45237500000002,
+    "pod": "cnpg-watch-e2e/payments-2"
+  },
+  {
+    "bundle": "fast",
+    "bytes": 693,
+    "db_execution_ms": 0.228,
+    "db_planning_ms": 0.455,
+    "full_round_trip_ms": 211.961292,
+    "pod": "cnpg-watch-e2e/payments-2"
+  },
+  {
+    "bundle": "fast_basic",
+    "bytes": 557,
+    "db_execution_ms": 0.198,
+    "db_planning_ms": 0.361,
+    "full_round_trip_ms": 191.06020800000002,
+    "pod": "cnpg-watch-e2e/payments-2"
+  },
+  {
+    "bundle": "medium",
+    "bytes": 617,
+    "db_execution_ms": 0.621,
+    "db_planning_ms": 0.553,
+    "full_round_trip_ms": 207.750667,
+    "pod": "cnpg-watch-e2e/payments-2"
+  },
+  {
+    "bundle": "deep",
+    "bytes": 863,
+    "db_execution_ms": 0.297,
+    "db_planning_ms": 0.436,
+    "full_round_trip_ms": 195.529833,
+    "pod": "cnpg-watch-e2e/payments-2"
+  },
+  {
+    "bundle": "deep_text",
+    "bytes": 863,
+    "db_execution_ms": 0.304,
+    "db_planning_ms": 0.427,
+    "full_round_trip_ms": 197.926916,
+    "pod": "cnpg-watch-e2e/payments-2"
+  },
+  {
+    "pod": "cnpg-watch-e2e/payments-1",
+    "psql_startup_connect_select1_round_trip_ms": 197.04191600000001
+  },
+  {
+    "exec_only_baseline_ms": 181.153708,
+    "pod": "cnpg-watch-e2e/payments-1"
+  },
+  {
+    "bundle": "capabilities",
+    "bytes": 2604,
+    "db_execution_ms": 0.238,
+    "db_planning_ms": 0.317,
+    "full_round_trip_ms": 244.141,
+    "pod": "cnpg-watch-e2e-other/inventory-1"
+  },
+  {
+    "bundle": "fast",
+    "bytes": 710,
+    "db_execution_ms": 0.247,
+    "db_planning_ms": 0.463,
+    "full_round_trip_ms": 209.420083,
+    "pod": "cnpg-watch-e2e-other/inventory-1"
+  },
+  {
+    "bundle": "fast_basic",
+    "bytes": 574,
+    "db_execution_ms": 0.208,
+    "db_planning_ms": 0.4,
+    "full_round_trip_ms": 198.25187499999998,
+    "pod": "cnpg-watch-e2e-other/inventory-1"
+  },
+  {
+    "bundle": "medium",
+    "bytes": 618,
+    "db_execution_ms": 0.617,
+    "db_planning_ms": 0.559,
+    "full_round_trip_ms": 198.698583,
+    "pod": "cnpg-watch-e2e-other/inventory-1"
+  },
+  {
+    "bundle": "deep",
+    "bytes": 1006,
+    "db_execution_ms": 0.344,
+    "db_planning_ms": 0.469,
+    "full_round_trip_ms": 181.357333,
+    "pod": "cnpg-watch-e2e-other/inventory-1"
+  },
+  {
+    "bundle": "deep_text",
+    "bytes": 1006,
+    "db_execution_ms": 0.334,
+    "db_planning_ms": 0.446,
+    "full_round_trip_ms": 195.19958300000002,
+    "pod": "cnpg-watch-e2e-other/inventory-1"
+  },
+  {
+    "pod": "cnpg-watch-e2e-other/inventory-1",
+    "psql_startup_connect_select1_round_trip_ms": 192.94091699999998
+  },
+  {
+    "exec_only_baseline_ms": 183.40537500000002,
+    "pod": "cnpg-watch-e2e-other/inventory-1"
+  }
+]

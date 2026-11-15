@@ -1,0 +1,32 @@
+{
+  "classes": {
+    "capabilities": {
+      "completed": 6,
+      "failed": 2,
+      "last_duration_ms": 56,
+      "last_sweep_ms": 56
+    },
+    "deep": {
+      "completed": 1,
+      "failed": 0,
+      "last_duration_ms": 56,
+      "last_sweep_ms": null
+    },
+    "fast": {
+      "completed": 64,
+      "failed": 1,
+      "last_duration_ms": 56,
+      "last_sweep_ms": 56
+    },
+    "medium": {
+      "completed": 3,
+      "failed": 0,
+      "last_duration_ms": 56,
+      "last_sweep_ms": 33428
+    }
+  },
+  "cleanup_errors": 0,
+  "held_load_backends": 26,
+  "scenario": "selected incident cluster, actual saturation, independent logs/topology and promotion recovery",
+  "shutdown_ms": 1.748583
+}

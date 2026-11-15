@@ -1,0 +1,629 @@
+#compdef cnpg-watch
+
+autoload -U is-at-least
+
+_cnpg-watch() {
+    typeset -A opt_args
+    typeset -a _arguments_options
+    local ret=1
+
+    if is-at-least 5.2; then
+        _arguments_options=(-s -S -C)
+    else
+        _arguments_options=(-s -C)
+    fi
+
+    local context curcontext="$curcontext" state line
+    _arguments "${_arguments_options[@]}" : \
+'--config=[]:CONFIG:_files' \
+'--kube-context=[]:KUBE_CONTEXT:_default' \
+'(--all-namespaces)-n+[]:NAMESPACE:_default' \
+'(--all-namespaces)--namespace=[]:NAMESPACE:_default' \
+'--all-namespaces=[]::ALL_NAMESPACES:(true false)' \
+'--cluster=[]:CLUSTER:_default' \
+'--selector=[Kubernetes label selector for Cluster resources]:SELECTOR:_default' \
+'--pooler-socket=[]:POOLER_SOCKET:_default' \
+'*--certificate-secret=[Explicit named certificate Secret reads (namespace/name); no Secret lists/watches]:CERTIFICATE_SECRET:_default' \
+'--operator-metrics-url=[Optional bounded metrics scrape; disabled unless a URL is supplied]:OPERATOR_METRICS_URL:_default' \
+'--operator-namespace=[]:OPERATOR_NAMESPACE:_default' \
+'--operator-selector=[]:OPERATOR_SELECTOR:_default' \
+'--profile=[]:PROFILE:(minimal standard incident secure)' \
+'--refresh=[]:REFRESH:_default' \
+'--password-file=[]:PASSWORD_FILE:_files' \
+'--log-file=[]:LOG_FILE:_files' \
+'--dump-dir=[]:DUMP_DIR:_files' \
+'--db-role=[]:DB_ROLE:_default' \
+'--show-query-text[Display bounded query text in incident wait diagnostics; dumps always redact it]' \
+'--pooler-stats[Read fixed SHOW commands over CNPG'\''s built-in local-peer PgBouncer console]' \
+'--cluster-resources[Observe optional cluster-scoped webhook and image catalog metadata]' \
+'--no-operator-watch[]' \
+'--verbose[]' \
+'-h[Print help (see more with '\''--help'\'')]' \
+'--help[Print help (see more with '\''--help'\'')]' \
+'-V[Print version]' \
+'--version[Print version]' \
+":: :_cnpg-watch_commands" \
+"*::: :->cnpg-watch" \
+&& ret=0
+    case $state in
+    (cnpg-watch)
+        words=($line[1] "${words[@]}")
+        (( CURRENT += 1 ))
+        curcontext="${curcontext%:*:*}:cnpg-watch-command-$line[1]:"
+        case $line[1] in
+            (completions)
+_arguments "${_arguments_options[@]}" : \
+'--config=[]:CONFIG:_files' \
+'--kube-context=[]:KUBE_CONTEXT:_default' \
+'(--all-namespaces)-n+[]:NAMESPACE:_default' \
+'(--all-namespaces)--namespace=[]:NAMESPACE:_default' \
+'--all-namespaces=[]::ALL_NAMESPACES:(true false)' \
+'--cluster=[]:CLUSTER:_default' \
+'--selector=[Kubernetes label selector for Cluster resources]:SELECTOR:_default' \
+'--pooler-socket=[]:POOLER_SOCKET:_default' \
+'*--certificate-secret=[Explicit named certificate Secret reads (namespace/name); no Secret lists/watches]:CERTIFICATE_SECRET:_default' \
+'--operator-metrics-url=[Optional bounded metrics scrape; disabled unless a URL is supplied]:OPERATOR_METRICS_URL:_default' \
+'--operator-namespace=[]:OPERATOR_NAMESPACE:_default' \
+'--operator-selector=[]:OPERATOR_SELECTOR:_default' \
+'--profile=[]:PROFILE:(minimal standard incident secure)' \
+'--refresh=[]:REFRESH:_default' \
+'--password-file=[]:PASSWORD_FILE:_files' \
+'--log-file=[]:LOG_FILE:_files' \
+'--dump-dir=[]:DUMP_DIR:_files' \
+'--db-role=[]:DB_ROLE:_default' \
+'--show-query-text[Display bounded query text in incident wait diagnostics; dumps always redact it]' \
+'--pooler-stats[Read fixed SHOW commands over CNPG'\''s built-in local-peer PgBouncer console]' \
+'--cluster-resources[Observe optional cluster-scoped webhook and image catalog metadata]' \
+'--no-operator-watch[]' \
+'--verbose[]' \
+'-h[Print help]' \
+'--help[Print help]' \
+':shell:(bash elvish fish powershell zsh)' \
+&& ret=0
+;;
+(command-reference)
+_arguments "${_arguments_options[@]}" : \
+'--config=[]:CONFIG:_files' \
+'--kube-context=[]:KUBE_CONTEXT:_default' \
+'(--all-namespaces)-n+[]:NAMESPACE:_default' \
+'(--all-namespaces)--namespace=[]:NAMESPACE:_default' \
+'--all-namespaces=[]::ALL_NAMESPACES:(true false)' \
+'--cluster=[]:CLUSTER:_default' \
+'--selector=[Kubernetes label selector for Cluster resources]:SELECTOR:_default' \
+'--pooler-socket=[]:POOLER_SOCKET:_default' \
+'*--certificate-secret=[Explicit named certificate Secret reads (namespace/name); no Secret lists/watches]:CERTIFICATE_SECRET:_default' \
+'--operator-metrics-url=[Optional bounded metrics scrape; disabled unless a URL is supplied]:OPERATOR_METRICS_URL:_default' \
+'--operator-namespace=[]:OPERATOR_NAMESPACE:_default' \
+'--operator-selector=[]:OPERATOR_SELECTOR:_default' \
+'--profile=[]:PROFILE:(minimal standard incident secure)' \
+'--refresh=[]:REFRESH:_default' \
+'--password-file=[]:PASSWORD_FILE:_files' \
+'--log-file=[]:LOG_FILE:_files' \
+'--dump-dir=[]:DUMP_DIR:_files' \
+'--db-role=[]:DB_ROLE:_default' \
+'--show-query-text[Display bounded query text in incident wait diagnostics; dumps always redact it]' \
+'--pooler-stats[Read fixed SHOW commands over CNPG'\''s built-in local-peer PgBouncer console]' \
+'--cluster-resources[Observe optional cluster-scoped webhook and image catalog metadata]' \
+'--no-operator-watch[]' \
+'--verbose[]' \
+'-h[Print help]' \
+'--help[Print help]' \
+&& ret=0
+;;
+(watch)
+_arguments "${_arguments_options[@]}" : \
+'--config=[]:CONFIG:_files' \
+'--kube-context=[]:KUBE_CONTEXT:_default' \
+'(--all-namespaces)-n+[]:NAMESPACE:_default' \
+'(--all-namespaces)--namespace=[]:NAMESPACE:_default' \
+'--all-namespaces=[]::ALL_NAMESPACES:(true false)' \
+'--cluster=[]:CLUSTER:_default' \
+'--selector=[Kubernetes label selector for Cluster resources]:SELECTOR:_default' \
+'--pooler-socket=[]:POOLER_SOCKET:_default' \
+'*--certificate-secret=[Explicit named certificate Secret reads (namespace/name); no Secret lists/watches]:CERTIFICATE_SECRET:_default' \
+'--operator-metrics-url=[Optional bounded metrics scrape; disabled unless a URL is supplied]:OPERATOR_METRICS_URL:_default' \
+'--operator-namespace=[]:OPERATOR_NAMESPACE:_default' \
+'--operator-selector=[]:OPERATOR_SELECTOR:_default' \
+'--profile=[]:PROFILE:(minimal standard incident secure)' \
+'--refresh=[]:REFRESH:_default' \
+'--password-file=[]:PASSWORD_FILE:_files' \
+'--log-file=[]:LOG_FILE:_files' \
+'--dump-dir=[]:DUMP_DIR:_files' \
+'--db-role=[]:DB_ROLE:_default' \
+'--show-query-text[Display bounded query text in incident wait diagnostics; dumps always redact it]' \
+'--pooler-stats[Read fixed SHOW commands over CNPG'\''s built-in local-peer PgBouncer console]' \
+'--cluster-resources[Observe optional cluster-scoped webhook and image catalog metadata]' \
+'--no-operator-watch[]' \
+'--verbose[]' \
+'-h[Print help]' \
+'--help[Print help]' \
+&& ret=0
+;;
+(info)
+_arguments "${_arguments_options[@]}" : \
+'--output=[]:OUTPUT:(text json)' \
+'--config=[]:CONFIG:_files' \
+'--kube-context=[]:KUBE_CONTEXT:_default' \
+'(--all-namespaces)-n+[]:NAMESPACE:_default' \
+'(--all-namespaces)--namespace=[]:NAMESPACE:_default' \
+'--all-namespaces=[]::ALL_NAMESPACES:(true false)' \
+'--cluster=[]:CLUSTER:_default' \
+'--selector=[Kubernetes label selector for Cluster resources]:SELECTOR:_default' \
+'--pooler-socket=[]:POOLER_SOCKET:_default' \
+'*--certificate-secret=[Explicit named certificate Secret reads (namespace/name); no Secret lists/watches]:CERTIFICATE_SECRET:_default' \
+'--operator-metrics-url=[Optional bounded metrics scrape; disabled unless a URL is supplied]:OPERATOR_METRICS_URL:_default' \
+'--operator-namespace=[]:OPERATOR_NAMESPACE:_default' \
+'--operator-selector=[]:OPERATOR_SELECTOR:_default' \
+'--profile=[]:PROFILE:(minimal standard incident secure)' \
+'--refresh=[]:REFRESH:_default' \
+'--password-file=[]:PASSWORD_FILE:_files' \
+'--log-file=[]:LOG_FILE:_files' \
+'--dump-dir=[]:DUMP_DIR:_files' \
+'--db-role=[]:DB_ROLE:_default' \
+'--show-query-text[Display bounded query text in incident wait diagnostics; dumps always redact it]' \
+'--pooler-stats[Read fixed SHOW commands over CNPG'\''s built-in local-peer PgBouncer console]' \
+'--cluster-resources[Observe optional cluster-scoped webhook and image catalog metadata]' \
+'--no-operator-watch[]' \
+'--verbose[]' \
+'-h[Print help]' \
+'--help[Print help]' \
+&& ret=0
+;;
+(doctor)
+_arguments "${_arguments_options[@]}" : \
+'--output=[]:OUTPUT:(text json)' \
+'--config=[]:CONFIG:_files' \
+'--kube-context=[]:KUBE_CONTEXT:_default' \
+'(--all-namespaces)-n+[]:NAMESPACE:_default' \
+'(--all-namespaces)--namespace=[]:NAMESPACE:_default' \
+'--all-namespaces=[]::ALL_NAMESPACES:(true false)' \
+'--cluster=[]:CLUSTER:_default' \
+'--selector=[Kubernetes label selector for Cluster resources]:SELECTOR:_default' \
+'--pooler-socket=[]:POOLER_SOCKET:_default' \
+'*--certificate-secret=[Explicit named certificate Secret reads (namespace/name); no Secret lists/watches]:CERTIFICATE_SECRET:_default' \
+'--operator-metrics-url=[Optional bounded metrics scrape; disabled unless a URL is supplied]:OPERATOR_METRICS_URL:_default' \
+'--operator-namespace=[]:OPERATOR_NAMESPACE:_default' \
+'--operator-selector=[]:OPERATOR_SELECTOR:_default' \
+'--profile=[]:PROFILE:(minimal standard incident secure)' \
+'--refresh=[]:REFRESH:_default' \
+'--password-file=[]:PASSWORD_FILE:_files' \
+'--log-file=[]:LOG_FILE:_files' \
+'--dump-dir=[]:DUMP_DIR:_files' \
+'--db-role=[]:DB_ROLE:_default' \
+'--include-cluster-resources[Also check optional catalog/webhook object access]' \
+'--show-query-text[Display bounded query text in incident wait diagnostics; dumps always redact it]' \
+'--pooler-stats[Read fixed SHOW commands over CNPG'\''s built-in local-peer PgBouncer console]' \
+'--cluster-resources[Observe optional cluster-scoped webhook and image catalog metadata]' \
+'--no-operator-watch[]' \
+'--verbose[]' \
+'-h[Print help]' \
+'--help[Print help]' \
+&& ret=0
+;;
+(setup)
+_arguments "${_arguments_options[@]}" : \
+'--config=[]:CONFIG:_files' \
+'--kube-context=[]:KUBE_CONTEXT:_default' \
+'(--all-namespaces)-n+[]:NAMESPACE:_default' \
+'(--all-namespaces)--namespace=[]:NAMESPACE:_default' \
+'--all-namespaces=[]::ALL_NAMESPACES:(true false)' \
+'--cluster=[]:CLUSTER:_default' \
+'--selector=[Kubernetes label selector for Cluster resources]:SELECTOR:_default' \
+'--pooler-socket=[]:POOLER_SOCKET:_default' \
+'*--certificate-secret=[Explicit named certificate Secret reads (namespace/name); no Secret lists/watches]:CERTIFICATE_SECRET:_default' \
+'--operator-metrics-url=[Optional bounded metrics scrape; disabled unless a URL is supplied]:OPERATOR_METRICS_URL:_default' \
+'--operator-namespace=[]:OPERATOR_NAMESPACE:_default' \
+'--operator-selector=[]:OPERATOR_SELECTOR:_default' \
+'--profile=[]:PROFILE:(minimal standard incident secure)' \
+'--refresh=[]:REFRESH:_default' \
+'--password-file=[]:PASSWORD_FILE:_files' \
+'--log-file=[]:LOG_FILE:_files' \
+'--dump-dir=[]:DUMP_DIR:_files' \
+'--db-role=[]:DB_ROLE:_default' \
+'--show-query-text[Display bounded query text in incident wait diagnostics; dumps always redact it]' \
+'--pooler-stats[Read fixed SHOW commands over CNPG'\''s built-in local-peer PgBouncer console]' \
+'--cluster-resources[Observe optional cluster-scoped webhook and image catalog metadata]' \
+'--no-operator-watch[]' \
+'--verbose[]' \
+'-h[Print help]' \
+'--help[Print help]' \
+":: :_cnpg-watch__subcmd__setup_commands" \
+"*::: :->setup" \
+&& ret=0
+
+    case $state in
+    (setup)
+        words=($line[1] "${words[@]}")
+        (( CURRENT += 1 ))
+        curcontext="${curcontext%:*:*}:cnpg-watch-setup-command-$line[1]:"
+        case $line[1] in
+            (kubernetes-rbac)
+_arguments "${_arguments_options[@]}" : \
+'--service-account=[]:SERVICE_ACCOUNT:_default' \
+'--service-account-namespace=[]:SERVICE_ACCOUNT_NAMESPACE:_default' \
+'--user=[]:USER:_default' \
+'--group=[]:GROUP:_default' \
+'--name=[]:NAME:_default' \
+'--output=[]:OUTPUT:(yaml json text)' \
+'--config=[]:CONFIG:_files' \
+'--kube-context=[]:KUBE_CONTEXT:_default' \
+'(--all-namespaces)-n+[]:NAMESPACE:_default' \
+'(--all-namespaces)--namespace=[]:NAMESPACE:_default' \
+'--all-namespaces=[]::ALL_NAMESPACES:(true false)' \
+'--cluster=[]:CLUSTER:_default' \
+'--selector=[Kubernetes label selector for Cluster resources]:SELECTOR:_default' \
+'--pooler-socket=[]:POOLER_SOCKET:_default' \
+'*--certificate-secret=[Explicit named certificate Secret reads (namespace/name); no Secret lists/watches]:CERTIFICATE_SECRET:_default' \
+'--operator-metrics-url=[Optional bounded metrics scrape; disabled unless a URL is supplied]:OPERATOR_METRICS_URL:_default' \
+'--operator-namespace=[]:OPERATOR_NAMESPACE:_default' \
+'--operator-selector=[]:OPERATOR_SELECTOR:_default' \
+'--profile=[]:PROFILE:(minimal standard incident secure)' \
+'--refresh=[]:REFRESH:_default' \
+'--password-file=[]:PASSWORD_FILE:_files' \
+'--log-file=[]:LOG_FILE:_files' \
+'--dump-dir=[]:DUMP_DIR:_files' \
+'--db-role=[]:DB_ROLE:_default' \
+'--include-cluster-resources[]' \
+'(--apply --diff)--dry-run[]' \
+'(--apply)--diff[]' \
+'--apply[]' \
+'--prune[]' \
+'--show-query-text[Display bounded query text in incident wait diagnostics; dumps always redact it]' \
+'--pooler-stats[Read fixed SHOW commands over CNPG'\''s built-in local-peer PgBouncer console]' \
+'--cluster-resources[Observe optional cluster-scoped webhook and image catalog metadata]' \
+'--no-operator-watch[]' \
+'--verbose[]' \
+'-h[Print help]' \
+'--help[Print help]' \
+&& ret=0
+;;
+(postgres-role)
+_arguments "${_arguments_options[@]}" : \
+'--role-profile=[]:ROLE_PROFILE:(monitor monitor-reserved actions)' \
+'--role-name=[]:ROLE_NAME:_default' \
+'--admin-role=[Explicit administrative login for setup only; never used by watch]:ADMIN_ROLE:_default' \
+'--admin-password-file=[]:ADMIN_PASSWORD_FILE:_files' \
+'--output=[]:OUTPUT:(sql json text)' \
+'--config=[]:CONFIG:_files' \
+'--kube-context=[]:KUBE_CONTEXT:_default' \
+'(--all-namespaces)-n+[]:NAMESPACE:_default' \
+'(--all-namespaces)--namespace=[]:NAMESPACE:_default' \
+'--all-namespaces=[]::ALL_NAMESPACES:(true false)' \
+'--cluster=[]:CLUSTER:_default' \
+'--selector=[Kubernetes label selector for Cluster resources]:SELECTOR:_default' \
+'--pooler-socket=[]:POOLER_SOCKET:_default' \
+'*--certificate-secret=[Explicit named certificate Secret reads (namespace/name); no Secret lists/watches]:CERTIFICATE_SECRET:_default' \
+'--operator-metrics-url=[Optional bounded metrics scrape; disabled unless a URL is supplied]:OPERATOR_METRICS_URL:_default' \
+'--operator-namespace=[]:OPERATOR_NAMESPACE:_default' \
+'--operator-selector=[]:OPERATOR_SELECTOR:_default' \
+'--profile=[]:PROFILE:(minimal standard incident secure)' \
+'--refresh=[]:REFRESH:_default' \
+'--password-file=[]:PASSWORD_FILE:_files' \
+'--log-file=[]:LOG_FILE:_files' \
+'--dump-dir=[]:DUMP_DIR:_files' \
+'--db-role=[]:DB_ROLE:_default' \
+'(--apply --diff)--print-sql[]' \
+'(--apply --diff)--dry-run[]' \
+'(--apply)--diff[]' \
+'--apply[]' \
+'--prune[]' \
+'(--rotate-password)--preserve-password[Preserve existing password (the default); new roles have no password]' \
+'--rotate-password[Set the password from the protected global --password-file; never print it]' \
+'--validate[After apply, authenticate as the monitor and run the shipped fast bundle]' \
+'--show-query-text[Display bounded query text in incident wait diagnostics; dumps always redact it]' \
+'--pooler-stats[Read fixed SHOW commands over CNPG'\''s built-in local-peer PgBouncer console]' \
+'--cluster-resources[Observe optional cluster-scoped webhook and image catalog metadata]' \
+'--no-operator-watch[]' \
+'--verbose[]' \
+'-h[Print help]' \
+'--help[Print help]' \
+&& ret=0
+;;
+(pooler-role)
+_arguments "${_arguments_options[@]}" : \
+'--pooler=[]:POOLER:_default' \
+'--output=[]:OUTPUT:(text json)' \
+'--config=[]:CONFIG:_files' \
+'--kube-context=[]:KUBE_CONTEXT:_default' \
+'(--all-namespaces)-n+[]:NAMESPACE:_default' \
+'(--all-namespaces)--namespace=[]:NAMESPACE:_default' \
+'--all-namespaces=[]::ALL_NAMESPACES:(true false)' \
+'--cluster=[]:CLUSTER:_default' \
+'--selector=[Kubernetes label selector for Cluster resources]:SELECTOR:_default' \
+'--pooler-socket=[]:POOLER_SOCKET:_default' \
+'*--certificate-secret=[Explicit named certificate Secret reads (namespace/name); no Secret lists/watches]:CERTIFICATE_SECRET:_default' \
+'--operator-metrics-url=[Optional bounded metrics scrape; disabled unless a URL is supplied]:OPERATOR_METRICS_URL:_default' \
+'--operator-namespace=[]:OPERATOR_NAMESPACE:_default' \
+'--operator-selector=[]:OPERATOR_SELECTOR:_default' \
+'--profile=[]:PROFILE:(minimal standard incident secure)' \
+'--refresh=[]:REFRESH:_default' \
+'--password-file=[]:PASSWORD_FILE:_files' \
+'--log-file=[]:LOG_FILE:_files' \
+'--dump-dir=[]:DUMP_DIR:_files' \
+'--db-role=[]:DB_ROLE:_default' \
+'(--diff)--dry-run[]' \
+'--diff[]' \
+'--show-query-text[Display bounded query text in incident wait diagnostics; dumps always redact it]' \
+'--pooler-stats[Read fixed SHOW commands over CNPG'\''s built-in local-peer PgBouncer console]' \
+'--cluster-resources[Observe optional cluster-scoped webhook and image catalog metadata]' \
+'--no-operator-watch[]' \
+'--verbose[]' \
+'-h[Print help]' \
+'--help[Print help]' \
+&& ret=0
+;;
+(help)
+_arguments "${_arguments_options[@]}" : \
+":: :_cnpg-watch__subcmd__setup__subcmd__help_commands" \
+"*::: :->help" \
+&& ret=0
+
+    case $state in
+    (help)
+        words=($line[1] "${words[@]}")
+        (( CURRENT += 1 ))
+        curcontext="${curcontext%:*:*}:cnpg-watch-setup-help-command-$line[1]:"
+        case $line[1] in
+            (kubernetes-rbac)
+_arguments "${_arguments_options[@]}" : \
+&& ret=0
+;;
+(postgres-role)
+_arguments "${_arguments_options[@]}" : \
+&& ret=0
+;;
+(pooler-role)
+_arguments "${_arguments_options[@]}" : \
+&& ret=0
+;;
+(help)
+_arguments "${_arguments_options[@]}" : \
+&& ret=0
+;;
+        esac
+    ;;
+esac
+;;
+        esac
+    ;;
+esac
+;;
+(help)
+_arguments "${_arguments_options[@]}" : \
+":: :_cnpg-watch__subcmd__help_commands" \
+"*::: :->help" \
+&& ret=0
+
+    case $state in
+    (help)
+        words=($line[1] "${words[@]}")
+        (( CURRENT += 1 ))
+        curcontext="${curcontext%:*:*}:cnpg-watch-help-command-$line[1]:"
+        case $line[1] in
+            (completions)
+_arguments "${_arguments_options[@]}" : \
+&& ret=0
+;;
+(command-reference)
+_arguments "${_arguments_options[@]}" : \
+&& ret=0
+;;
+(watch)
+_arguments "${_arguments_options[@]}" : \
+&& ret=0
+;;
+(info)
+_arguments "${_arguments_options[@]}" : \
+&& ret=0
+;;
+(doctor)
+_arguments "${_arguments_options[@]}" : \
+&& ret=0
+;;
+(setup)
+_arguments "${_arguments_options[@]}" : \
+":: :_cnpg-watch__subcmd__help__subcmd__setup_commands" \
+"*::: :->setup" \
+&& ret=0
+
+    case $state in
+    (setup)
+        words=($line[1] "${words[@]}")
+        (( CURRENT += 1 ))
+        curcontext="${curcontext%:*:*}:cnpg-watch-help-setup-command-$line[1]:"
+        case $line[1] in
+            (kubernetes-rbac)
+_arguments "${_arguments_options[@]}" : \
+&& ret=0
+;;
+(postgres-role)
+_arguments "${_arguments_options[@]}" : \
+&& ret=0
+;;
+(pooler-role)
+_arguments "${_arguments_options[@]}" : \
+&& ret=0
+;;
+        esac
+    ;;
+esac
+;;
+(help)
+_arguments "${_arguments_options[@]}" : \
+&& ret=0
+;;
+        esac
+    ;;
+esac
+;;
+        esac
+    ;;
+esac
+}
+
+(( $+functions[_cnpg-watch_commands] )) ||
+_cnpg-watch_commands() {
+    local commands; commands=(
+'completions:Generate shell completions without reading config or contacting Kubernetes' \
+'command-reference:Print the Markdown command reference without reading config or contacting Kubernetes' \
+'watch:Open the observe-only dashboard (also the default command)' \
+'info:Print paths and local configuration without contacting Kubernetes' \
+'doctor:Check scoped access and the actual monitoring role without bootstrap changes' \
+'setup:Review or explicitly apply runtime RBAC and PostgreSQL roles' \
+'help:Print this message or the help of the given subcommand(s)' \
+    )
+    _describe -t commands 'cnpg-watch commands' commands "$@"
+}
+(( $+functions[_cnpg-watch__subcmd__command-reference_commands] )) ||
+_cnpg-watch__subcmd__command-reference_commands() {
+    local commands; commands=()
+    _describe -t commands 'cnpg-watch command-reference commands' commands "$@"
+}
+(( $+functions[_cnpg-watch__subcmd__completions_commands] )) ||
+_cnpg-watch__subcmd__completions_commands() {
+    local commands; commands=()
+    _describe -t commands 'cnpg-watch completions commands' commands "$@"
+}
+(( $+functions[_cnpg-watch__subcmd__doctor_commands] )) ||
+_cnpg-watch__subcmd__doctor_commands() {
+    local commands; commands=()
+    _describe -t commands 'cnpg-watch doctor commands' commands "$@"
+}
+(( $+functions[_cnpg-watch__subcmd__help_commands] )) ||
+_cnpg-watch__subcmd__help_commands() {
+    local commands; commands=(
+'completions:Generate shell completions without reading config or contacting Kubernetes' \
+'command-reference:Print the Markdown command reference without reading config or contacting Kubernetes' \
+'watch:Open the observe-only dashboard (also the default command)' \
+'info:Print paths and local configuration without contacting Kubernetes' \
+'doctor:Check scoped access and the actual monitoring role without bootstrap changes' \
+'setup:Review or explicitly apply runtime RBAC and PostgreSQL roles' \
+'help:Print this message or the help of the given subcommand(s)' \
+    )
+    _describe -t commands 'cnpg-watch help commands' commands "$@"
+}
+(( $+functions[_cnpg-watch__subcmd__help__subcmd__command-reference_commands] )) ||
+_cnpg-watch__subcmd__help__subcmd__command-reference_commands() {
+    local commands; commands=()
+    _describe -t commands 'cnpg-watch help command-reference commands' commands "$@"
+}
+(( $+functions[_cnpg-watch__subcmd__help__subcmd__completions_commands] )) ||
+_cnpg-watch__subcmd__help__subcmd__completions_commands() {
+    local commands; commands=()
+    _describe -t commands 'cnpg-watch help completions commands' commands "$@"
+}
+(( $+functions[_cnpg-watch__subcmd__help__subcmd__doctor_commands] )) ||
+_cnpg-watch__subcmd__help__subcmd__doctor_commands() {
+    local commands; commands=()
+    _describe -t commands 'cnpg-watch help doctor commands' commands "$@"
+}
+(( $+functions[_cnpg-watch__subcmd__help__subcmd__help_commands] )) ||
+_cnpg-watch__subcmd__help__subcmd__help_commands() {
+    local commands; commands=()
+    _describe -t commands 'cnpg-watch help help commands' commands "$@"
+}
+(( $+functions[_cnpg-watch__subcmd__help__subcmd__info_commands] )) ||
+_cnpg-watch__subcmd__help__subcmd__info_commands() {
+    local commands; commands=()
+    _describe -t commands 'cnpg-watch help info commands' commands "$@"
+}
+(( $+functions[_cnpg-watch__subcmd__help__subcmd__setup_commands] )) ||
+_cnpg-watch__subcmd__help__subcmd__setup_commands() {
+    local commands; commands=(
+'kubernetes-rbac:' \
+'postgres-role:' \
+'pooler-role:' \
+    )
+    _describe -t commands 'cnpg-watch help setup commands' commands "$@"
+}
+(( $+functions[_cnpg-watch__subcmd__help__subcmd__setup__subcmd__kubernetes-rbac_commands] )) ||
+_cnpg-watch__subcmd__help__subcmd__setup__subcmd__kubernetes-rbac_commands() {
+    local commands; commands=()
+    _describe -t commands 'cnpg-watch help setup kubernetes-rbac commands' commands "$@"
+}
+(( $+functions[_cnpg-watch__subcmd__help__subcmd__setup__subcmd__pooler-role_commands] )) ||
+_cnpg-watch__subcmd__help__subcmd__setup__subcmd__pooler-role_commands() {
+    local commands; commands=()
+    _describe -t commands 'cnpg-watch help setup pooler-role commands' commands "$@"
+}
+(( $+functions[_cnpg-watch__subcmd__help__subcmd__setup__subcmd__postgres-role_commands] )) ||
+_cnpg-watch__subcmd__help__subcmd__setup__subcmd__postgres-role_commands() {
+    local commands; commands=()
+    _describe -t commands 'cnpg-watch help setup postgres-role commands' commands "$@"
+}
+(( $+functions[_cnpg-watch__subcmd__help__subcmd__watch_commands] )) ||
+_cnpg-watch__subcmd__help__subcmd__watch_commands() {
+    local commands; commands=()
+    _describe -t commands 'cnpg-watch help watch commands' commands "$@"
+}
+(( $+functions[_cnpg-watch__subcmd__info_commands] )) ||
+_cnpg-watch__subcmd__info_commands() {
+    local commands; commands=()
+    _describe -t commands 'cnpg-watch info commands' commands "$@"
+}
+(( $+functions[_cnpg-watch__subcmd__setup_commands] )) ||
+_cnpg-watch__subcmd__setup_commands() {
+    local commands; commands=(
+'kubernetes-rbac:' \
+'postgres-role:' \
+'pooler-role:' \
+'help:Print this message or the help of the given subcommand(s)' \
+    )
+    _describe -t commands 'cnpg-watch setup commands' commands "$@"
+}
+(( $+functions[_cnpg-watch__subcmd__setup__subcmd__help_commands] )) ||
+_cnpg-watch__subcmd__setup__subcmd__help_commands() {
+    local commands; commands=(
+'kubernetes-rbac:' \
+'postgres-role:' \
+'pooler-role:' \
+'help:Print this message or the help of the given subcommand(s)' \
+    )
+    _describe -t commands 'cnpg-watch setup help commands' commands "$@"
+}
+(( $+functions[_cnpg-watch__subcmd__setup__subcmd__help__subcmd__help_commands] )) ||
+_cnpg-watch__subcmd__setup__subcmd__help__subcmd__help_commands() {
+    local commands; commands=()
+    _describe -t commands 'cnpg-watch setup help help commands' commands "$@"
+}
+(( $+functions[_cnpg-watch__subcmd__setup__subcmd__help__subcmd__kubernetes-rbac_commands] )) ||
+_cnpg-watch__subcmd__setup__subcmd__help__subcmd__kubernetes-rbac_commands() {
+    local commands; commands=()
+    _describe -t commands 'cnpg-watch setup help kubernetes-rbac commands' commands "$@"
+}
+(( $+functions[_cnpg-watch__subcmd__setup__subcmd__help__subcmd__pooler-role_commands] )) ||
+_cnpg-watch__subcmd__setup__subcmd__help__subcmd__pooler-role_commands() {
+    local commands; commands=()
+    _describe -t commands 'cnpg-watch setup help pooler-role commands' commands "$@"
+}
+(( $+functions[_cnpg-watch__subcmd__setup__subcmd__help__subcmd__postgres-role_commands] )) ||
+_cnpg-watch__subcmd__setup__subcmd__help__subcmd__postgres-role_commands() {
+    local commands; commands=()
+    _describe -t commands 'cnpg-watch setup help postgres-role commands' commands "$@"
+}
+(( $+functions[_cnpg-watch__subcmd__setup__subcmd__kubernetes-rbac_commands] )) ||
+_cnpg-watch__subcmd__setup__subcmd__kubernetes-rbac_commands() {
+    local commands; commands=()
+    _describe -t commands 'cnpg-watch setup kubernetes-rbac commands' commands "$@"
+}
+(( $+functions[_cnpg-watch__subcmd__setup__subcmd__pooler-role_commands] )) ||
+_cnpg-watch__subcmd__setup__subcmd__pooler-role_commands() {
+    local commands; commands=()
+    _describe -t commands 'cnpg-watch setup pooler-role commands' commands "$@"
+}
+(( $+functions[_cnpg-watch__subcmd__setup__subcmd__postgres-role_commands] )) ||
+_cnpg-watch__subcmd__setup__subcmd__postgres-role_commands() {
+    local commands; commands=()
+    _describe -t commands 'cnpg-watch setup postgres-role commands' commands "$@"
+}
+(( $+functions[_cnpg-watch__subcmd__watch_commands] )) ||
+_cnpg-watch__subcmd__watch_commands() {
+    local commands; commands=()
+    _describe -t commands 'cnpg-watch watch commands' commands "$@"
+}
+
+if [ "$funcstack[1]" = "_cnpg-watch" ]; then
+    _cnpg-watch "$@"
+else
+    compdef _cnpg-watch cnpg-watch
+fi

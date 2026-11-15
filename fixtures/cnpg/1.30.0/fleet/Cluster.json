@@ -1,0 +1,30 @@
+[
+  {
+    "apiVersion": "postgresql.cnpg.io/v1",
+    "kind": "Cluster",
+    "metadata": {
+      "creationTimestamp": "2026-11-15T08:33:13Z",
+      "name": "inventory",
+      "namespace": "cnpg-watch-e2e-other",
+      "uid": "uid-21361c98de19354f"
+    },
+    "status": {
+      "currentPrimary": "inventory-1",
+      "phase": "Cluster in healthy state"
+    }
+  },
+  {
+    "apiVersion": "postgresql.cnpg.io/v1",
+    "kind": "Cluster",
+    "metadata": {
+      "creationTimestamp": "2026-11-15T08:32:17Z",
+      "name": "payments",
+      "namespace": "cnpg-watch-e2e",
+      "uid": "uid-f5ad2c6b5c27042e"
+    },
+    "status": {
+      "currentPrimary": "payments-1",
+      "phase": "Cluster in healthy state"
+    }
+  }
+]

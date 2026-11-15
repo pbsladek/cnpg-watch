@@ -1,0 +1,25 @@
+[
+  {
+    "apiVersion": "postgresql.cnpg.io/v1",
+    "kind": "ScheduledBackup",
+    "metadata": {
+      "namespace": "cnpg-watch-e2e",
+      "name": "payments-suspended",
+      "uid": "f15d379d-74f6-4192-b33d-fd4b1d7aa9c5",
+      "generation": 1
+    },
+    "spec": {
+      "backupOwnerReference": "none",
+      "cluster": {
+        "name": "payments"
+      },
+      "immediate": false,
+      "method": "plugin",
+      "pluginConfiguration": {
+        "name": "unavailable-fixture-plugin"
+      },
+      "schedule": "0 0 0 * * *",
+      "suspend": true
+    }
+  }
+]

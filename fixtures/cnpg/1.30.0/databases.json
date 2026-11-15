@@ -1,0 +1,25 @@
+[
+  {
+    "apiVersion": "postgresql.cnpg.io/v1",
+    "kind": "Database",
+    "metadata": {
+      "namespace": "cnpg-watch-e2e",
+      "name": "watch-fixture-db",
+      "uid": "216a5ae1-4cc5-4221-bac0-9541cd083fa3",
+      "generation": 1
+    },
+    "spec": {
+      "cluster": {
+        "name": "payments"
+      },
+      "databaseReclaimPolicy": "retain",
+      "ensure": "present",
+      "name": "watch_fixture",
+      "owner": "watch_fixture"
+    },
+    "status": {
+      "applied": true,
+      "observedGeneration": 1
+    }
+  }
+]

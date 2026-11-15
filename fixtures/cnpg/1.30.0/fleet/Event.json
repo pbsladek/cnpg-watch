@@ -1,0 +1,182 @@
+[
+  {
+    "metadata": {
+      "creationTimestamp": "2026-11-15T08:32:06Z",
+      "name": "cnpg-controller-manager-695fcbbb85-8t5x9.18e82ad098da7b3a",
+      "namespace": "cnpg-system",
+      "uid": "uid-a8f0b1aeca629431"
+    },
+    "eventTime": "2026-11-15T08:32:06.913158Z",
+    "involvedObject": {
+      "apiVersion": "v1",
+      "kind": "Pod",
+      "name": "cnpg-controller-manager-695fcbbb85-8t5x9",
+      "namespace": "cnpg-system",
+      "resourceVersion": "447",
+      "uid": "uid-665961e060ecd2a1"
+    },
+    "lastTimestamp": null,
+    "reason": "Scheduled",
+    "type": "Normal",
+    "message": "[fixture event message omitted]"
+  },
+  {
+    "metadata": {
+      "creationTimestamp": "2026-11-15T08:32:07Z",
+      "name": "cnpg-controller-manager-695fcbbb85-8t5x9.18e82ad0b1d6e894",
+      "namespace": "cnpg-system",
+      "uid": "uid-6ff8a49a09c8cead"
+    },
+    "count": 1,
+    "eventTime": null,
+    "involvedObject": {
+      "apiVersion": "v1",
+      "fieldPath": "spec.containers{manager}",
+      "kind": "Pod",
+      "name": "cnpg-controller-manager-695fcbbb85-8t5x9",
+      "namespace": "cnpg-system",
+      "resourceVersion": "448",
+      "uid": "uid-665961e060ecd2a1"
+    },
+    "lastTimestamp": "2026-11-15T08:32:07Z",
+    "reason": "Pulling",
+    "type": "Normal",
+    "message": "[fixture event message omitted]"
+  },
+  {
+    "metadata": {
+      "creationTimestamp": "2026-11-15T08:32:11Z",
+      "name": "cnpg-controller-manager-695fcbbb85-8t5x9.18e82ad1ae4d4a5a",
+      "namespace": "cnpg-system",
+      "uid": "uid-8bd3b5a150a03948"
+    },
+    "count": 1,
+    "eventTime": null,
+    "involvedObject": {
+      "apiVersion": "v1",
+      "fieldPath": "spec.containers{manager}",
+      "kind": "Pod",
+      "name": "cnpg-controller-manager-695fcbbb85-8t5x9",
+      "namespace": "cnpg-system",
+      "resourceVersion": "448",
+      "uid": "uid-665961e060ecd2a1"
+    },
+    "lastTimestamp": "2026-11-15T08:32:11Z",
+    "reason": "Pulled",
+    "type": "Normal",
+    "message": "[fixture event message omitted]"
+  },
+  {
+    "metadata": {
+      "creationTimestamp": "2026-11-15T08:32:11Z",
+      "name": "cnpg-controller-manager-695fcbbb85-8t5x9.18e82ad1aec0b276",
+      "namespace": "cnpg-system",
+      "uid": "uid-87f3a3231f080d09"
+    },
+    "count": 1,
+    "eventTime": null,
+    "involvedObject": {
+      "apiVersion": "v1",
+      "fieldPath": "spec.containers{manager}",
+      "kind": "Pod",
+      "name": "cnpg-controller-manager-695fcbbb85-8t5x9",
+      "namespace": "cnpg-system",
+      "resourceVersion": "448",
+      "uid": "uid-665961e060ecd2a1"
+    },
+    "lastTimestamp": "2026-11-15T08:32:11Z",
+    "reason": "Created",
+    "type": "Normal",
+    "message": "[fixture event message omitted]"
+  },
+  {
+    "metadata": {
+      "creationTimestamp": "2026-11-15T08:32:11Z",
+      "name": "cnpg-controller-manager-695fcbbb85-8t5x9.18e82ad1b00bc11d",
+      "namespace": "cnpg-system",
+      "uid": "uid-34c8177e6684f9c5"
+    },
+    "count": 1,
+    "eventTime": null,
+    "involvedObject": {
+      "apiVersion": "v1",
+      "fieldPath": "spec.containers{manager}",
+      "kind": "Pod",
+      "name": "cnpg-controller-manager-695fcbbb85-8t5x9",
+      "namespace": "cnpg-system",
+      "resourceVersion": "448",
+      "uid": "uid-665961e060ecd2a1"
+    },
+    "lastTimestamp": "2026-11-15T08:32:11Z",
+    "reason": "Started",
+    "type": "Normal",
+    "message": "[fixture event message omitted]"
+  },
+  {
+    "metadata": {
+      "creationTimestamp": "2026-11-15T08:32:12Z",
+      "name": "cnpg-controller-manager-695fcbbb85-8t5x9.18e82ad1d54ff2aa",
+      "namespace": "cnpg-system",
+      "uid": "uid-41b9a0c171ffb60e"
+    },
+    "count": 1,
+    "eventTime": null,
+    "involvedObject": {
+      "apiVersion": "v1",
+      "fieldPath": "spec.containers{manager}",
+      "kind": "Pod",
+      "name": "cnpg-controller-manager-695fcbbb85-8t5x9",
+      "namespace": "cnpg-system",
+      "resourceVersion": "448",
+      "uid": "uid-665961e060ecd2a1"
+    },
+    "lastTimestamp": "2026-11-15T08:32:12Z",
+    "reason": "Unhealthy",
+    "type": "Warning",
+    "message": "[fixture event message omitted]"
+  },
+  {
+    "metadata": {
+      "creationTimestamp": "2026-11-15T08:32:06Z",
+      "name": "cnpg-controller-manager-695fcbbb85.18e82ad098af0857",
+      "namespace": "cnpg-system",
+      "uid": "uid-a15730db6077383b"
+    },
+    "count": 1,
+    "eventTime": null,
+    "involvedObject": {
+      "apiVersion": "apps/v1",
+      "kind": "ReplicaSet",
+      "name": "cnpg-controller-manager-695fcbbb85",
+      "namespace": "cnpg-system",
+      "resourceVersion": "437",
+      "uid": "uid-db5098fb4d994a72"
+    },
+    "lastTimestamp": "2026-11-15T08:32:06Z",
+    "reason": "SuccessfulCreate",
+    "type": "Normal",
+    "message": "[fixture event message omitted]"
+  },
+  {
+    "metadata": {
+      "creationTimestamp": "2026-11-15T08:32:06Z",
+      "name": "cnpg-controller-manager.18e82ad08558880d",
+      "namespace": "cnpg-system",
+      "uid": "uid-2eb82ff59b89eacc"
+    },
+    "count": 1,
+    "eventTime": null,
+    "involvedObject": {
+      "apiVersion": "apps/v1",
+      "kind": "Deployment",
+      "name": "cnpg-controller-manager",
+      "namespace": "cnpg-system",
+      "resourceVersion": "436",
+      "uid": "uid-6a32bfd0a4ff6d88"
+    },
+    "lastTimestamp": "2026-11-15T08:32:06Z",
+    "reason": "ScalingReplicaSet",
+    "type": "Normal",
+    "message": "[fixture event message omitted]"
+  }
+]

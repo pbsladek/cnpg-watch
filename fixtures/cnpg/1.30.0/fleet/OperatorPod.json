@@ -1,0 +1,71 @@
+[
+  {
+    "metadata": {
+      "creationTimestamp": "2026-11-15T08:32:06Z",
+      "labels": {
+        "app.kubernetes.io/name": "cloudnative-pg",
+        "pod-template-hash": "695fcbbb85"
+      },
+      "name": "cnpg-controller-manager-695fcbbb85-8t5x9",
+      "namespace": "cnpg-system",
+      "ownerReferences": [
+        {
+          "apiVersion": "apps/v1",
+          "blockOwnerDeletion": true,
+          "controller": true,
+          "kind": "ReplicaSet",
+          "name": "cnpg-controller-manager-695fcbbb85",
+          "uid": "uid-db5098fb4d994a72"
+        }
+      ],
+      "uid": "uid-665961e060ecd2a1"
+    },
+    "status": {
+      "conditions": [
+        {
+          "status": "True",
+          "type": "PodReadyToStartContainers"
+        },
+        {
+          "status": "True",
+          "type": "Initialized"
+        },
+        {
+          "status": "True",
+          "type": "Ready"
+        },
+        {
+          "status": "True",
+          "type": "ContainersReady"
+        },
+        {
+          "status": "True",
+          "type": "PodScheduled"
+        }
+      ],
+      "containerStatuses": [
+        {
+          "image": "ghcr.io/cloudnative-pg/cloudnative-pg:1.30.0",
+          "imageID": "ghcr.io/cloudnative-pg/cloudnative-pg@sha256:a2701eb97cdd2a34b1fdb2cb51987f544b706e40bec72ae7146cd8580efefebb",
+          "name": "manager",
+          "ready": true,
+          "restartCount": 0,
+          "started": true,
+          "state": {
+            "running": {
+              "startedAt": "2026-11-15T08:32:11Z"
+            }
+          }
+        }
+      ],
+      "podIP": "192.0.2.10"
+    },
+    "spec": {
+      "containers": [
+        {
+          "name": "manager"
+        }
+      ]
+    }
+  }
+]

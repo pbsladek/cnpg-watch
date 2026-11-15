@@ -1,0 +1,34 @@
+---
+source: tests/terminal_layout.rs
+assertion_line: 210
+expression: "render(&content(name), 100, 30)"
+---
+cnpg-watch | ctx fixture | ns app-db | Incident | reduced 0
+app-db/payments > Logs | scope 1 | SQL Available
+┌Logs──────────────────────────────────────────────────────────────────────────────────────────────┐
+│source                   timestamp / level  correlation / message                                 │
+│app-db/payments-very-lon 2026-11-15T00:00:0 漢 字  🌊  é wide text and a deliberately long message th│
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+└──────────────────────────────────────────────────────────────────────────────────────────────────┘
+evidence remains bounded; i inspects selected row
+
+Instances | Enter related | i detail | Esc back | q quit

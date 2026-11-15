@@ -1,0 +1,34 @@
+---
+source: tests/terminal_layout.rs
+assertion_line: 210
+expression: "render(&content(name), 100, 30)"
+---
+cnpg-watch | ctx fixture | ns app-db | Incident | reduced 0
+app-db/payments > Fleet | scope 1 | SQL Available
+┌Fleet─────────────────────────────────────────────────────────────────────────────────────────────┐
+│No clusters after successful synchronization                                                      │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+└──────────────────────────────────────────────────────────────────────────────────────────────────┘
+evidence remains bounded; i inspects selected row
+
+Instances | Enter related | i detail | Esc back | q quit

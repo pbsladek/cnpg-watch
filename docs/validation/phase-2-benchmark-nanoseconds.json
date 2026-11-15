@@ -1,0 +1,18 @@
+{
+  "cluster_adapter": 514.6623046364157,
+  "pipeline/capabilities/10": 333.83333995849455,
+  "pipeline/capabilities/100": 2994.7302940835534,
+  "pipeline/capabilities/1000": 29189.540847316704,
+  "pipeline/render_100x30/10": 35818.525546754376,
+  "pipeline/render_100x30/100": 36275.68451857143,
+  "pipeline/render_100x30/1000": 35149.690044160336,
+  "pipeline/render_120x40/10": 50375.661767736565,
+  "pipeline/render_120x40/100": 49330.594245609595,
+  "pipeline/render_120x40/1000": 49371.91353174603,
+  "pipeline/unchanged_reduce/10": 86.3943546898889,
+  "pipeline/unchanged_reduce/100": 86.957481553159,
+  "pipeline/unchanged_reduce/1000": 90.29937563329426,
+  "pipeline/view/10": 684.5166604853773,
+  "pipeline/view/100": 2971.06314824118,
+  "pipeline/view/1000": 26241.596648094313
+}

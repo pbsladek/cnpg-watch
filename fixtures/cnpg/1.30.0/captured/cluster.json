@@ -1,0 +1,14 @@
+{
+  "apiVersion": "postgresql.cnpg.io/v1",
+  "kind": "Cluster",
+  "metadata": {
+    "namespace": "cnpg-watch-e2e",
+    "name": "payments",
+    "uid": "live-cluster",
+    "generation": 1
+  },
+  "status": {
+    "currentPrimary": "payments-1",
+    "phase": "Cluster in healthy state"
+  }
+}

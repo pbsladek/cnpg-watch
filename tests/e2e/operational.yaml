@@ -1,0 +1,81 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: ScheduledBackup
+metadata:
+  name: payments-suspended
+  namespace: cnpg-watch-e2e
+spec:
+  cluster:
+    name: payments
+  schedule: '0 0 0 * * *'
+  suspend: true
+  immediate: false
+  method: plugin
+  pluginConfiguration:
+    name: unavailable-fixture-plugin
+---
+apiVersion: postgresql.cnpg.io/v1
+kind: Backup
+metadata:
+  name: payments-unavailable-plugin
+  namespace: cnpg-watch-e2e
+spec:
+  cluster:
+    name: payments
+  method: plugin
+  pluginConfiguration:
+    name: unavailable-fixture-plugin
+---
+apiVersion: postgresql.cnpg.io/v1
+kind: DatabaseRole
+metadata:
+  name: watch-fixture-role
+  namespace: cnpg-watch-e2e
+spec:
+  cluster:
+    name: payments
+  name: watch_fixture
+  ensure: present
+  login: false
+---
+apiVersion: postgresql.cnpg.io/v1
+kind: Database
+metadata:
+  name: watch-fixture-db
+  namespace: cnpg-watch-e2e
+spec:
+  cluster:
+    name: payments
+  name: watch_fixture
+  owner: watch_fixture
+---
+apiVersion: postgresql.cnpg.io/v1
+kind: Publication
+metadata:
+  name: watch-fixture-publication
+  namespace: cnpg-watch-e2e
+spec:
+  cluster:
+    name: payments
+  name: watch_fixture_publication
+  dbname: watch_fixture
+  target:
+    allTables: true
+---
+apiVersion: postgresql.cnpg.io/v1
+kind: ImageCatalog
+metadata:
+  name: watch-fixture-images
+  namespace: cnpg-watch-e2e
+spec:
+  images:
+    - major: 18
+      image: ghcr.io/cloudnative-pg/postgresql:18.4
+---
+apiVersion: postgresql.cnpg.io/v1
+kind: ClusterImageCatalog
+metadata:
+  name: watch-fixture-images
+spec:
+  images:
+    - major: 18
+      image: ghcr.io/cloudnative-pg/postgresql:18.4

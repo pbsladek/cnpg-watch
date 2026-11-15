@@ -1,0 +1,33 @@
+{
+  "accepted_log_lines": 307200,
+  "arch": "aarch64",
+  "cache_high_bytes": 362714,
+  "dropped_log_lines": 0,
+  "input_p95_us": 96710,
+  "input_p99_us": 100323,
+  "live_tasks_after_shutdown": 0,
+  "log_high_bytes": 8388120,
+  "os": "macos",
+  "pooler_completions": 24,
+  "queued_high_bytes": 541184,
+  "render_count": 601,
+  "rss_max_kib": 22384,
+  "rss_samples_kib": [
+    10928,
+    19984,
+    20224,
+    21312,
+    21312,
+    21680,
+    21808,
+    21808,
+    21808,
+    21808,
+    21808,
+    22384
+  ],
+  "scenario": "100 clusters/300 instances/2 pooler pods, 1000 topology updates/s, 5120 log lines/s using production framing/redaction/retention, bounded timeline projection, operational health and queued/admitted/reduced PgBouncer samples, TestBackend 120x40",
+  "scope_churns": 5,
+  "seconds": 60,
+  "view_render_p95_us": 3057
+}

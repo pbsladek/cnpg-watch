@@ -1,0 +1,122 @@
+[
+  {
+    "metadata": {
+      "creationTimestamp": "2026-11-15T08:33:15Z",
+      "labels": {
+        "app.kubernetes.io/component": "database",
+        "app.kubernetes.io/managed-by": "cloudnative-pg",
+        "app.kubernetes.io/name": "postgresql",
+        "cnpg.io/cluster": "inventory",
+        "cnpg.io/instanceName": "inventory-1",
+        "cnpg.io/instanceRole": "primary",
+        "cnpg.io/pvcRole": "PG_DATA",
+        "role": "primary"
+      },
+      "name": "inventory-1",
+      "namespace": "cnpg-watch-e2e-other",
+      "ownerReferences": [
+        {
+          "apiVersion": "postgresql.cnpg.io/v1",
+          "controller": true,
+          "kind": "Cluster",
+          "name": "inventory",
+          "uid": "uid-21361c98de19354f"
+        }
+      ],
+      "uid": "uid-6f1dd1847613c434"
+    },
+    "spec": {
+      "resources": {
+        "requests": {
+          "storage": "1Gi"
+        }
+      }
+    },
+    "status": {
+      "capacity": {
+        "storage": "1Gi"
+      },
+      "phase": "Bound"
+    }
+  },
+  {
+    "metadata": {
+      "creationTimestamp": "2026-11-15T08:32:20Z",
+      "labels": {
+        "app.kubernetes.io/component": "database",
+        "app.kubernetes.io/managed-by": "cloudnative-pg",
+        "app.kubernetes.io/name": "postgresql",
+        "cnpg.io/cluster": "payments",
+        "cnpg.io/instanceName": "payments-1",
+        "cnpg.io/instanceRole": "primary",
+        "cnpg.io/pvcRole": "PG_DATA",
+        "role": "primary"
+      },
+      "name": "payments-1",
+      "namespace": "cnpg-watch-e2e",
+      "ownerReferences": [
+        {
+          "apiVersion": "postgresql.cnpg.io/v1",
+          "controller": true,
+          "kind": "Cluster",
+          "name": "payments",
+          "uid": "uid-f5ad2c6b5c27042e"
+        }
+      ],
+      "uid": "uid-73d4082c62773f4b"
+    },
+    "spec": {
+      "resources": {
+        "requests": {
+          "storage": "1Gi"
+        }
+      }
+    },
+    "status": {
+      "capacity": {
+        "storage": "1Gi"
+      },
+      "phase": "Bound"
+    }
+  },
+  {
+    "metadata": {
+      "creationTimestamp": "2026-11-15T08:32:51Z",
+      "labels": {
+        "app.kubernetes.io/component": "database",
+        "app.kubernetes.io/managed-by": "cloudnative-pg",
+        "app.kubernetes.io/name": "postgresql",
+        "cnpg.io/cluster": "payments",
+        "cnpg.io/instanceName": "payments-2",
+        "cnpg.io/instanceRole": "replica",
+        "cnpg.io/pvcRole": "PG_DATA",
+        "role": "replica"
+      },
+      "name": "payments-2",
+      "namespace": "cnpg-watch-e2e",
+      "ownerReferences": [
+        {
+          "apiVersion": "postgresql.cnpg.io/v1",
+          "controller": true,
+          "kind": "Cluster",
+          "name": "payments",
+          "uid": "uid-f5ad2c6b5c27042e"
+        }
+      ],
+      "uid": "uid-41d4b30495eefaef"
+    },
+    "spec": {
+      "resources": {
+        "requests": {
+          "storage": "1Gi"
+        }
+      }
+    },
+    "status": {
+      "capacity": {
+        "storage": "1Gi"
+      },
+      "phase": "Bound"
+    }
+  }
+]

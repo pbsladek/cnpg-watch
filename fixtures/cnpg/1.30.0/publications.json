@@ -1,0 +1,27 @@
+[
+  {
+    "apiVersion": "postgresql.cnpg.io/v1",
+    "kind": "Publication",
+    "metadata": {
+      "namespace": "cnpg-watch-e2e",
+      "name": "watch-fixture-publication",
+      "uid": "156156f6-fa24-4e85-919c-cdeefe5d0ac9",
+      "generation": 1
+    },
+    "spec": {
+      "cluster": {
+        "name": "payments"
+      },
+      "dbname": "watch_fixture",
+      "name": "watch_fixture_publication",
+      "publicationReclaimPolicy": "retain",
+      "target": {
+        "allTables": true
+      }
+    },
+    "status": {
+      "applied": true,
+      "observedGeneration": 1
+    }
+  }
+]

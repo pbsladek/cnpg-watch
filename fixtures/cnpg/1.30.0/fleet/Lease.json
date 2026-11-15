@@ -1,0 +1,14 @@
+[
+  {
+    "metadata": {
+      "creationTimestamp": "2026-11-15T08:32:14Z",
+      "name": "db9c8771.cnpg.io",
+      "namespace": "cnpg-system",
+      "uid": "uid-a382e45e537112af"
+    },
+    "spec": {
+      "holderIdentity": "cnpg-controller-manager-695fcbbb85-8t5x9_da4111c5-e9c7-471c-b4a0-28254e1483a9",
+      "renewTime": "2026-11-15T08:52:59.282658Z"
+    }
+  }
+]

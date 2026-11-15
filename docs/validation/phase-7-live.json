@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "qualification": "local",
+  "hosted_ci": "not run",
+  "cnpg": "1.30.0",
+  "postgres": "18.4",
+  "pooler": "1.25.1",
+  "k3d": "5.9.0",
+  "kubectl": "1.35.5",
+  "cells": [
+    {
+      "cell": "k8s134",
+      "run": {
+        "schema_version": 1,
+        "fixture": "cnpg-watch-e2e-1794778505-f82e73",
+        "matrix_cell": "k8s134",
+        "server_version": "v1.34.8+k3s1",
+        "exit_code": 0,
+        "cleanup": "passed",
+        "fixture_disk_policy": {
+          "eviction_floor": "1Gi",
+          "image_gc_high_percent": 99,
+          "reason": "shared Docker VM; absolute floor for isolated test nodes"
+        }
+      },
+      "fixture_absent_after_final_cleanup": true,
+      "deleted_after_idle": false,
+      "rust_cases_passed": 14,
+      "exec": {
+        "both": {
+          "allowed": true,
+          "error": null
+        },
+        "create_only": {
+          "allowed": false,
+          "error": "Forbidden"
+        },
+        "get_only": {
+          "allowed": true,
+          "error": null
+        },
+        "neither": {
+          "allowed": false,
+          "error": "Forbidden"
+        }
+      },
+      "terminal": {
+        "driver": "portable-pty 0.9 / vt100 0.18",
+        "feedback_p95_us": 95835,
+        "feedback_us": [
+          91014,
+          91141,
+          94167,
+          94918,
+          95835,
+          98044
+        ],
+        "flood_lines": 8000,
+        "normal_exit": 0,
+        "real_navigation_resize_cycles": 8,
+        "schema_version": 1,
+        "terminal_restored": true
+      }
+    },
+    {
+      "cell": "k8s135",
+      "run": {
+        "schema_version": 1,
+        "fixture": "cnpg-watch-e2e-1794779082-c808c1",
+        "matrix_cell": "k8s135",
+        "server_version": "v1.35.5+k3s1",
+        "exit_code": 0,
+        "cleanup": "retained",
+        "fixture_disk_policy": {
+          "eviction_floor": "1Gi",
+          "image_gc_high_percent": 99,
+          "reason": "shared Docker VM; absolute floor for isolated test nodes"
+        }
+      },
+      "fixture_absent_after_final_cleanup": true,
+      "deleted_after_idle": true,
+      "rust_cases_passed": 14,
+      "exec": {
+        "both": {
+          "allowed": true,
+          "error": null
+        },
+        "create_only": {
+          "allowed": false,
+          "error": "Forbidden"
+        },
+        "get_only": {
+          "allowed": false,
+          "error": "Forbidden"
+        },
+        "neither": {
+          "allowed": false,
+          "error": "Forbidden"
+        }
+      },
+      "terminal": {
+        "driver": "portable-pty 0.9 / vt100 0.18",
+        "feedback_p95_us": 99805,
+        "feedback_us": [
+          92805,
+          94290,
+          95392,
+          96825,
+          99805,
+          100829
+        ],
+        "flood_lines": 8000,
+        "normal_exit": 0,
+        "real_navigation_resize_cycles": 8,
+        "schema_version": 1,
+        "terminal_restored": true
+      }
+    },
+    {
+      "cell": "k8s136",
+      "run": {
+        "schema_version": 1,
+        "fixture": "cnpg-watch-e2e-1794779582-fc9b67",
+        "matrix_cell": "k8s136",
+        "server_version": "v1.36.1+k3s1",
+        "exit_code": 0,
+        "cleanup": "passed",
+        "fixture_disk_policy": {
+          "eviction_floor": "1Gi",
+          "image_gc_high_percent": 99,
+          "reason": "shared Docker VM; absolute floor for isolated test nodes"
+        }
+      },
+      "fixture_absent_after_final_cleanup": true,
+      "deleted_after_idle": false,
+      "rust_cases_passed": 14,
+      "exec": {
+        "both": {
+          "allowed": true,
+          "error": null
+        },
+        "create_only": {
+          "allowed": false,
+          "error": "Forbidden"
+        },
+        "get_only": {
+          "allowed": false,
+          "error": "Forbidden"
+        },
+        "neither": {
+          "allowed": false,
+          "error": "Forbidden"
+        }
+      },
+      "terminal": {
+        "driver": "portable-pty 0.9 / vt100 0.18",
+        "feedback_p95_us": 98412,
+        "feedback_us": [
+          91906,
+          92126,
+          93702,
+          96930,
+          98412,
+          99319
+        ],
+        "flood_lines": 8000,
+        "normal_exit": 0,
+        "real_navigation_resize_cycles": 8,
+        "schema_version": 1,
+        "terminal_restored": true
+      }
+    }
+  ],
+  "injected_failure_cleanup": {
+    "schema_version": 1,
+    "fixture": "cnpg-watch-e2e-1794779067-c7753f",
+    "matrix_cell": "k8s135",
+    "server_version": "v1.35.5+k3s1",
+    "exit_code": 42,
+    "cleanup": "passed",
+    "fixture_disk_policy": {
+      "eviction_floor": "1Gi",
+      "image_gc_high_percent": 99,
+      "reason": "shared Docker VM; absolute floor for isolated test nodes"
+    }
+  },
+  "all_owned_fixtures_absent": true,
+  "original_docker_workloads_running": 8
+}

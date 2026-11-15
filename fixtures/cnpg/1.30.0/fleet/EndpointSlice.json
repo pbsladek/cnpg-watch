@@ -1,0 +1,340 @@
+[
+  {
+    "metadata": {
+      "creationTimestamp": "2026-11-15T08:32:06Z",
+      "labels": {
+        "endpointslice.kubernetes.io/managed-by": "endpointslice-controller.k8s.io",
+        "kubernetes.io/service-name": "cnpg-webhook-service"
+      },
+      "name": "cnpg-webhook-service-lstg7",
+      "namespace": "cnpg-system",
+      "ownerReferences": [
+        {
+          "apiVersion": "v1",
+          "blockOwnerDeletion": true,
+          "controller": true,
+          "kind": "Service",
+          "name": "cnpg-webhook-service",
+          "uid": "uid-881ae848b3cdadff"
+        }
+      ],
+      "uid": "uid-e2821350881bd475"
+    },
+    "endpoints": [
+      {
+        "conditions": {
+          "ready": true,
+          "serving": true,
+          "terminating": false
+        },
+        "targetRef": {
+          "kind": "Pod",
+          "name": "cnpg-controller-manager-695fcbbb85-8t5x9",
+          "namespace": "cnpg-system",
+          "uid": "uid-665961e060ecd2a1"
+        }
+      }
+    ]
+  },
+  {
+    "metadata": {
+      "creationTimestamp": "2026-11-15T08:33:13Z",
+      "labels": {
+        "app.kubernetes.io/component": "database",
+        "app.kubernetes.io/instance": "inventory",
+        "app.kubernetes.io/managed-by": "cloudnative-pg",
+        "app.kubernetes.io/name": "postgresql",
+        "app.kubernetes.io/version": "18",
+        "cnpg.io/cluster": "inventory",
+        "endpointslice.kubernetes.io/managed-by": "endpointslice-controller.k8s.io",
+        "kubernetes.io/service-name": "inventory-r"
+      },
+      "name": "inventory-r-xndsr",
+      "namespace": "cnpg-watch-e2e-other",
+      "ownerReferences": [
+        {
+          "apiVersion": "v1",
+          "blockOwnerDeletion": true,
+          "controller": true,
+          "kind": "Service",
+          "name": "inventory-r",
+          "uid": "uid-93a3017743e26e26"
+        }
+      ],
+      "uid": "uid-78bdf1aabe5f3163"
+    },
+    "endpoints": [
+      {
+        "conditions": {
+          "ready": true,
+          "serving": true,
+          "terminating": false
+        },
+        "targetRef": {
+          "kind": "Pod",
+          "name": "inventory-1",
+          "namespace": "cnpg-watch-e2e-other",
+          "uid": "uid-f29ef2076e2afdb9"
+        }
+      }
+    ]
+  },
+  {
+    "metadata": {
+      "creationTimestamp": "2026-11-15T08:33:13Z",
+      "labels": {
+        "app.kubernetes.io/component": "database",
+        "app.kubernetes.io/instance": "inventory",
+        "app.kubernetes.io/managed-by": "cloudnative-pg",
+        "app.kubernetes.io/name": "postgresql",
+        "app.kubernetes.io/version": "18",
+        "cnpg.io/cluster": "inventory",
+        "endpointslice.kubernetes.io/managed-by": "endpointslice-controller.k8s.io",
+        "kubernetes.io/service-name": "inventory-ro"
+      },
+      "name": "inventory-ro-v92fn",
+      "namespace": "cnpg-watch-e2e-other",
+      "ownerReferences": [
+        {
+          "apiVersion": "v1",
+          "blockOwnerDeletion": true,
+          "controller": true,
+          "kind": "Service",
+          "name": "inventory-ro",
+          "uid": "uid-29912b50e684b18a"
+        }
+      ],
+      "uid": "uid-391a6f83657fadf7"
+    },
+    "endpoints": []
+  },
+  {
+    "metadata": {
+      "creationTimestamp": "2026-11-15T08:33:13Z",
+      "labels": {
+        "app.kubernetes.io/component": "database",
+        "app.kubernetes.io/instance": "inventory",
+        "app.kubernetes.io/managed-by": "cloudnative-pg",
+        "app.kubernetes.io/name": "postgresql",
+        "app.kubernetes.io/version": "18",
+        "cnpg.io/cluster": "inventory",
+        "endpointslice.kubernetes.io/managed-by": "endpointslice-controller.k8s.io",
+        "kubernetes.io/service-name": "inventory-rw"
+      },
+      "name": "inventory-rw-7n9r4",
+      "namespace": "cnpg-watch-e2e-other",
+      "ownerReferences": [
+        {
+          "apiVersion": "v1",
+          "blockOwnerDeletion": true,
+          "controller": true,
+          "kind": "Service",
+          "name": "inventory-rw",
+          "uid": "uid-08f71492e0d236e9"
+        }
+      ],
+      "uid": "uid-2e9a97c395d5c42e"
+    },
+    "endpoints": [
+      {
+        "conditions": {
+          "ready": true,
+          "serving": true,
+          "terminating": false
+        },
+        "targetRef": {
+          "kind": "Pod",
+          "name": "inventory-1",
+          "namespace": "cnpg-watch-e2e-other",
+          "uid": "uid-f29ef2076e2afdb9"
+        }
+      }
+    ]
+  },
+  {
+    "metadata": {
+      "creationTimestamp": "2026-11-15T08:33:14Z",
+      "labels": {
+        "app.kubernetes.io/component": "pooler",
+        "app.kubernetes.io/instance": "payments",
+        "app.kubernetes.io/managed-by": "cloudnative-pg",
+        "app.kubernetes.io/name": "postgresql",
+        "cnpg.io/cluster": "payments",
+        "cnpg.io/podRole": "pooler",
+        "cnpg.io/poolerName": "payments-pool",
+        "endpointslice.kubernetes.io/managed-by": "endpointslice-controller.k8s.io",
+        "kubernetes.io/service-name": "payments-pool"
+      },
+      "name": "payments-pool-9t9zs",
+      "namespace": "cnpg-watch-e2e",
+      "ownerReferences": [
+        {
+          "apiVersion": "v1",
+          "blockOwnerDeletion": true,
+          "controller": true,
+          "kind": "Service",
+          "name": "payments-pool",
+          "uid": "uid-69704c0d8e49302a"
+        }
+      ],
+      "uid": "uid-a27d452a3a32d2cb"
+    },
+    "endpoints": [
+      {
+        "conditions": {
+          "ready": true,
+          "serving": true,
+          "terminating": false
+        },
+        "targetRef": {
+          "kind": "Pod",
+          "name": "payments-pool-56b88c855b-8h8xz",
+          "namespace": "cnpg-watch-e2e",
+          "uid": "uid-78a7d7dfb6a9a387"
+        }
+      }
+    ]
+  },
+  {
+    "metadata": {
+      "creationTimestamp": "2026-11-15T08:32:17Z",
+      "labels": {
+        "app.kubernetes.io/component": "database",
+        "app.kubernetes.io/instance": "payments",
+        "app.kubernetes.io/managed-by": "cloudnative-pg",
+        "app.kubernetes.io/name": "postgresql",
+        "app.kubernetes.io/version": "18",
+        "cnpg.io/cluster": "payments",
+        "endpointslice.kubernetes.io/managed-by": "endpointslice-controller.k8s.io",
+        "kubernetes.io/service-name": "payments-r"
+      },
+      "name": "payments-r-jvkfb",
+      "namespace": "cnpg-watch-e2e",
+      "ownerReferences": [
+        {
+          "apiVersion": "v1",
+          "blockOwnerDeletion": true,
+          "controller": true,
+          "kind": "Service",
+          "name": "payments-r",
+          "uid": "uid-325a132df73070ba"
+        }
+      ],
+      "uid": "uid-b45fc4219be28844"
+    },
+    "endpoints": [
+      {
+        "conditions": {
+          "ready": true,
+          "serving": true,
+          "terminating": false
+        },
+        "targetRef": {
+          "kind": "Pod",
+          "name": "payments-1",
+          "namespace": "cnpg-watch-e2e",
+          "uid": "uid-07c0dac51bf584e6"
+        }
+      },
+      {
+        "conditions": {
+          "ready": true,
+          "serving": true,
+          "terminating": false
+        },
+        "targetRef": {
+          "kind": "Pod",
+          "name": "payments-2",
+          "namespace": "cnpg-watch-e2e",
+          "uid": "uid-ad0564f8f56ee67d"
+        }
+      }
+    ]
+  },
+  {
+    "metadata": {
+      "creationTimestamp": "2026-11-15T08:32:17Z",
+      "labels": {
+        "app.kubernetes.io/component": "database",
+        "app.kubernetes.io/instance": "payments",
+        "app.kubernetes.io/managed-by": "cloudnative-pg",
+        "app.kubernetes.io/name": "postgresql",
+        "app.kubernetes.io/version": "18",
+        "cnpg.io/cluster": "payments",
+        "endpointslice.kubernetes.io/managed-by": "endpointslice-controller.k8s.io",
+        "kubernetes.io/service-name": "payments-ro"
+      },
+      "name": "payments-ro-dsp4n",
+      "namespace": "cnpg-watch-e2e",
+      "ownerReferences": [
+        {
+          "apiVersion": "v1",
+          "blockOwnerDeletion": true,
+          "controller": true,
+          "kind": "Service",
+          "name": "payments-ro",
+          "uid": "uid-8d0075b934b43ee4"
+        }
+      ],
+      "uid": "uid-25e6299ff4cf697a"
+    },
+    "endpoints": [
+      {
+        "conditions": {
+          "ready": true,
+          "serving": true,
+          "terminating": false
+        },
+        "targetRef": {
+          "kind": "Pod",
+          "name": "payments-2",
+          "namespace": "cnpg-watch-e2e",
+          "uid": "uid-ad0564f8f56ee67d"
+        }
+      }
+    ]
+  },
+  {
+    "metadata": {
+      "creationTimestamp": "2026-11-15T08:32:17Z",
+      "labels": {
+        "app.kubernetes.io/component": "database",
+        "app.kubernetes.io/instance": "payments",
+        "app.kubernetes.io/managed-by": "cloudnative-pg",
+        "app.kubernetes.io/name": "postgresql",
+        "app.kubernetes.io/version": "18",
+        "cnpg.io/cluster": "payments",
+        "endpointslice.kubernetes.io/managed-by": "endpointslice-controller.k8s.io",
+        "kubernetes.io/service-name": "payments-rw"
+      },
+      "name": "payments-rw-fsz5h",
+      "namespace": "cnpg-watch-e2e",
+      "ownerReferences": [
+        {
+          "apiVersion": "v1",
+          "blockOwnerDeletion": true,
+          "controller": true,
+          "kind": "Service",
+          "name": "payments-rw",
+          "uid": "uid-25933ec47dc1c5dc"
+        }
+      ],
+      "uid": "uid-c4c4ab140a3b4335"
+    },
+    "endpoints": [
+      {
+        "conditions": {
+          "ready": true,
+          "serving": true,
+          "terminating": false
+        },
+        "targetRef": {
+          "kind": "Pod",
+          "name": "payments-1",
+          "namespace": "cnpg-watch-e2e",
+          "uid": "uid-07c0dac51bf584e6"
+        }
+      }
+    ]
+  }
+]

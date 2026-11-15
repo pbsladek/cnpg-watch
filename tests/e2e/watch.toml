@@ -1,0 +1,4 @@
+namespace = "cnpg-watch-e2e"
+cluster = "payments"
+profile = "standard"
+db_role = "watch_monitor"

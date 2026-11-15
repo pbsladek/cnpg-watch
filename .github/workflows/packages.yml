@@ -1,0 +1,42 @@
+name: package-candidates
+on:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  package:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {os: macos-15, target: aarch64-apple-darwin}
+          - {os: macos-15-intel, target: x86_64-apple-darwin}
+          - {os: ubuntu-24.04, target: x86_64-unknown-linux-musl}
+          - {os: ubuntu-24.04-arm, target: aarch64-unknown-linux-musl}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@1.94.1
+        with:
+          targets: ${{ matrix.target }}
+      - uses: mlugg/setup-zig@v2
+        if: runner.os == 'Linux'
+        with:
+          version: 0.15.2
+      - if: runner.os == 'Linux'
+        run: cargo install cargo-zigbuild --version 0.24.1 --locked
+      - run: ./scripts/build-release.sh '${{ matrix.target }}'
+      - name: Execute the packaged binary on its matching runner
+        shell: bash
+        run: |
+          archive=$(find dist -name '*.tar.gz' -type f)
+          python3 scripts/smoke-package.py "$archive" --execution 'native GitHub runner' --report artifacts/package-smoke.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: package-${{ matrix.target }}
+          path: |
+            dist/*
+            artifacts/package-smoke.json
+      # Uploading workflow artifacts is not release publication.

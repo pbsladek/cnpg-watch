@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "fixture": "cnpg-watch-e2e-1794773734-1683e3",
+  "fixture_deleted": true,
+  "versions": {
+    "cnpg": "1.30.0",
+    "postgresql": "18.4",
+    "pgbouncer": "1.25.1",
+    "kubernetes": "v1.35.5+k3s1",
+    "k3d": "v5.9.0"
+  },
+  "selected_rust_cases": 12,
+  "live_behavior_cases": 11,
+  "optional_capture_hook": 1,
+  "actual_tui_workflows": 3,
+  "all_selected_checks_passed": true,
+  "pooler": {
+    "peer_identity": "pgbouncer",
+    "version": "1.25.1",
+    "application_pool_rows": 2,
+    "waiting_clients": 5,
+    "automatic_role_mutation_supported": false,
+    "doctor_preflight": "available",
+    "repeated_setup_diff_identical": true
+  },
+  "operational": {
+    "controller_applied": [
+      "Database",
+      "DatabaseRole",
+      "Publication"
+    ],
+    "failed_backup": "unavailable fixture plugin",
+    "suspended_schedule": true,
+    "subscription_and_quorum_lists": "empty; no successful reconciliation claimed",
+    "named_public_certificate": true,
+    "explicit_metrics": true,
+    "reduced_rbac_sources": [
+      "pooler exec",
+      "named Secret GET",
+      "DatabaseRole",
+      "webhooks",
+      "operator logs"
+    ],
+    "physical_restore_or_pitr_validated": false
+  },
+  "terminal_reader": "crossterm use-dev-tty; sixteen real navigation/resize cycles",
+  "remote_ci_run": false
+}

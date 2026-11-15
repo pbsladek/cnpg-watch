@@ -1,0 +1,280 @@
+[
+  {
+    "metadata": {
+      "creationTimestamp": "2026-11-15T08:33:22Z",
+      "labels": {
+        "app.kubernetes.io/component": "database",
+        "app.kubernetes.io/instance": "inventory",
+        "app.kubernetes.io/managed-by": "cloudnative-pg",
+        "app.kubernetes.io/name": "postgresql",
+        "app.kubernetes.io/version": "18",
+        "cnpg.io/cluster": "inventory",
+        "cnpg.io/instanceName": "inventory-1",
+        "cnpg.io/instanceRole": "primary",
+        "cnpg.io/podRole": "instance",
+        "role": "primary"
+      },
+      "name": "inventory-1",
+      "namespace": "cnpg-watch-e2e-other",
+      "ownerReferences": [
+        {
+          "apiVersion": "postgresql.cnpg.io/v1",
+          "blockOwnerDeletion": true,
+          "controller": true,
+          "kind": "Cluster",
+          "name": "inventory",
+          "uid": "uid-21361c98de19354f"
+        }
+      ],
+      "uid": "uid-f29ef2076e2afdb9"
+    },
+    "status": {
+      "conditions": [
+        {
+          "status": "True",
+          "type": "PodReadyToStartContainers"
+        },
+        {
+          "status": "True",
+          "type": "Initialized"
+        },
+        {
+          "status": "True",
+          "type": "Ready"
+        },
+        {
+          "status": "True",
+          "type": "ContainersReady"
+        },
+        {
+          "status": "True",
+          "type": "PodScheduled"
+        }
+      ],
+      "containerStatuses": [
+        {
+          "image": "ghcr.io/cloudnative-pg/postgresql:18.4",
+          "imageID": "ghcr.io/cloudnative-pg/postgresql@sha256:6138f19539304b585c6cafd1af82ca407f184139459a8e06f0880df4556d3588",
+          "name": "postgres",
+          "ready": true,
+          "restartCount": 0,
+          "started": true,
+          "state": {
+            "running": {
+              "startedAt": "2026-11-15T08:33:24Z"
+            }
+          }
+        }
+      ],
+      "podIP": "192.0.2.10"
+    }
+  },
+  {
+    "metadata": {
+      "creationTimestamp": "2026-11-15T08:32:39Z",
+      "labels": {
+        "app.kubernetes.io/component": "database",
+        "app.kubernetes.io/instance": "payments",
+        "app.kubernetes.io/managed-by": "cloudnative-pg",
+        "app.kubernetes.io/name": "postgresql",
+        "app.kubernetes.io/version": "18",
+        "cnpg.io/cluster": "payments",
+        "cnpg.io/instanceName": "payments-1",
+        "cnpg.io/instanceRole": "primary",
+        "cnpg.io/podRole": "instance",
+        "role": "primary"
+      },
+      "name": "payments-1",
+      "namespace": "cnpg-watch-e2e",
+      "ownerReferences": [
+        {
+          "apiVersion": "postgresql.cnpg.io/v1",
+          "blockOwnerDeletion": true,
+          "controller": true,
+          "kind": "Cluster",
+          "name": "payments",
+          "uid": "uid-f5ad2c6b5c27042e"
+        }
+      ],
+      "uid": "uid-07c0dac51bf584e6"
+    },
+    "status": {
+      "conditions": [
+        {
+          "status": "True",
+          "type": "PodReadyToStartContainers"
+        },
+        {
+          "status": "True",
+          "type": "Initialized"
+        },
+        {
+          "status": "True",
+          "type": "Ready"
+        },
+        {
+          "status": "True",
+          "type": "ContainersReady"
+        },
+        {
+          "status": "True",
+          "type": "PodScheduled"
+        }
+      ],
+      "containerStatuses": [
+        {
+          "image": "ghcr.io/cloudnative-pg/postgresql:18.4",
+          "imageID": "ghcr.io/cloudnative-pg/postgresql@sha256:6138f19539304b585c6cafd1af82ca407f184139459a8e06f0880df4556d3588",
+          "name": "postgres",
+          "ready": true,
+          "restartCount": 0,
+          "started": true,
+          "state": {
+            "running": {
+              "startedAt": "2026-11-15T08:32:41Z"
+            }
+          }
+        }
+      ],
+      "podIP": "192.0.2.10"
+    }
+  },
+  {
+    "metadata": {
+      "creationTimestamp": "2026-11-15T08:33:01Z",
+      "labels": {
+        "app.kubernetes.io/component": "database",
+        "app.kubernetes.io/instance": "payments",
+        "app.kubernetes.io/managed-by": "cloudnative-pg",
+        "app.kubernetes.io/name": "postgresql",
+        "app.kubernetes.io/version": "18",
+        "cnpg.io/cluster": "payments",
+        "cnpg.io/instanceName": "payments-2",
+        "cnpg.io/instanceRole": "replica",
+        "cnpg.io/podRole": "instance",
+        "role": "replica"
+      },
+      "name": "payments-2",
+      "namespace": "cnpg-watch-e2e",
+      "ownerReferences": [
+        {
+          "apiVersion": "postgresql.cnpg.io/v1",
+          "blockOwnerDeletion": true,
+          "controller": true,
+          "kind": "Cluster",
+          "name": "payments",
+          "uid": "uid-f5ad2c6b5c27042e"
+        }
+      ],
+      "uid": "uid-ad0564f8f56ee67d"
+    },
+    "status": {
+      "conditions": [
+        {
+          "status": "True",
+          "type": "PodReadyToStartContainers"
+        },
+        {
+          "status": "True",
+          "type": "Initialized"
+        },
+        {
+          "status": "True",
+          "type": "Ready"
+        },
+        {
+          "status": "True",
+          "type": "ContainersReady"
+        },
+        {
+          "status": "True",
+          "type": "PodScheduled"
+        }
+      ],
+      "containerStatuses": [
+        {
+          "image": "ghcr.io/cloudnative-pg/postgresql:18.4",
+          "imageID": "ghcr.io/cloudnative-pg/postgresql@sha256:6138f19539304b585c6cafd1af82ca407f184139459a8e06f0880df4556d3588",
+          "name": "postgres",
+          "ready": true,
+          "restartCount": 0,
+          "started": true,
+          "state": {
+            "running": {
+              "startedAt": "2026-11-15T08:33:02Z"
+            }
+          }
+        }
+      ],
+      "podIP": "192.0.2.10"
+    }
+  },
+  {
+    "metadata": {
+      "creationTimestamp": "2026-11-15T08:33:14Z",
+      "labels": {
+        "app.kubernetes.io/component": "pooler",
+        "app.kubernetes.io/instance": "payments",
+        "app.kubernetes.io/managed-by": "cloudnative-pg",
+        "app.kubernetes.io/name": "postgresql",
+        "cnpg.io/cluster": "payments",
+        "cnpg.io/podRole": "pooler",
+        "cnpg.io/poolerName": "payments-pool",
+        "pod-template-hash": "56b88c855b"
+      },
+      "name": "payments-pool-56b88c855b-8h8xz",
+      "namespace": "cnpg-watch-e2e",
+      "ownerReferences": [
+        {
+          "apiVersion": "apps/v1",
+          "blockOwnerDeletion": true,
+          "controller": true,
+          "kind": "ReplicaSet",
+          "name": "payments-pool-56b88c855b",
+          "uid": "uid-0296ad26860be91b"
+        }
+      ],
+      "uid": "uid-78a7d7dfb6a9a387"
+    },
+    "status": {
+      "conditions": [
+        {
+          "status": "True",
+          "type": "PodReadyToStartContainers"
+        },
+        {
+          "status": "True",
+          "type": "Initialized"
+        },
+        {
+          "status": "True",
+          "type": "Ready"
+        },
+        {
+          "status": "True",
+          "type": "ContainersReady"
+        },
+        {
+          "status": "True",
+          "type": "PodScheduled"
+        }
+      ],
+      "containerStatuses": [
+        {
+          "image": "ghcr.io/cloudnative-pg/pgbouncer:1.25.1",
+          "imageID": "ghcr.io/cloudnative-pg/pgbouncer@sha256:e6ddfe22d845e603825e235dd8334b21ecd125abea2a2172478f556b8dee2bb8",
+          "name": "pgbouncer",
+          "ready": true,
+          "restartCount": 0,
+          "started": true,
+          "state": {
+            "running": {
+              "startedAt": "2026-11-15T08:33:18Z"
+            }
+          }
+        }
+      ],
+      "podIP": "192.0.2.10"
+    }
+  }
+]

@@ -1,0 +1,46 @@
+{
+  "current_user": "watch_monitor",
+  "in_recovery": false,
+  "monitor": true,
+  "replication": [
+    {
+      "application_name": "payments-2",
+      "flush_lsn": "0/9000110",
+      "replay_lsn": "0/9000110",
+      "state": "streaming",
+      "sync_state": "async",
+      "write_lsn": "0/9000110"
+    }
+  ],
+  "schema_version": 1,
+  "server_time": "2026-11-15T00:00:00Z",
+  "server_version": 180004,
+  "session_user": "watch_monitor",
+  "settings": {
+    "hot_standby": "on",
+    "max_connections": "30",
+    "max_slot_wal_keep_size": "-1",
+    "reserved_connections": "0",
+    "superuser_reserved_connections": "3",
+    "synchronous_commit": "on",
+    "synchronous_standby_names": "",
+    "wal_keep_size": "512",
+    "wal_level": "logical"
+  },
+  "slot_count": 1,
+  "slots": [
+    {
+      "active": true,
+      "confirmed_flush_lsn": null,
+      "restart_lsn": "0/9000110",
+      "retained_bytes": "0",
+      "safe_wal_size": null,
+      "slot_name": "_cnpg_payments_2",
+      "slot_type": "physical",
+      "wal_status": "reserved"
+    }
+  ],
+  "superuser": false,
+  "system_id": "42",
+  "timeline": 1
+}

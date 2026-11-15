@@ -1,0 +1,31 @@
+{
+  "apiVersion": "v1",
+  "kind": "Pod",
+  "metadata": {
+    "namespace": "cnpg-watch-e2e",
+    "name": "payments-1",
+    "uid": "live-pod-1",
+    "labels": {
+      "cnpg.io/cluster": "payments",
+      "cnpg.io/instanceRole": "primary",
+      "cnpg.io/podRole": "instance"
+    }
+  },
+  "status": {
+    "podIP": "192.0.2.10",
+    "conditions": [
+      {
+        "observedGeneration": 1,
+        "status": "True",
+        "type": "Ready"
+      }
+    ],
+    "containerStatuses": [
+      {
+        "name": "postgres",
+        "ready": true,
+        "restartCount": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+---
+source: tests/terminal_layout.rs
+assertion_line: 210
+expression: "render(&content(name), 100, 30)"
+---
+cnpg-watch | ctx fixture | ns app-db | Incident | reduced 0
+app-db/payments > Instances | scope 1 | SQL Available
+┌Health / evidence─────────────────────────────────────────────────────────────────────────────────┐
+│Warning: SQL attempt timed out; last-good evidence stale                                          │
+└──────────────────────────────────────────────────────────────────────────────────────────────────┘
+┌Instances─────────────────────────────────────────────────────────────────────────────────────────┐
+│instance                 role       ready   sample                                                │
+│payments-1               primary    yes     stale 12s; timeout                                    │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+│                                                                                                  │
+└──────────────────────────────────────────────────────────────────────────────────────────────────┘
+┌Recent events─────────────────────────────────────────────────────────────────────────────────────┐
+│app-db/payments: Normal: reconciliation completed                                                 │
+│                                                                                                  │
+│                                                                                                  │
+└──────────────────────────────────────────────────────────────────────────────────────────────────┘
+evidence remains bounded; i inspects selected row
+
+Instances | Enter related | i detail | Esc back | q quit

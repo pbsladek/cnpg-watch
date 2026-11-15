@@ -1,0 +1,220 @@
+[
+  {
+    "metadata": {
+      "creationTimestamp": "2026-11-15T08:33:13Z",
+      "labels": {
+        "app.kubernetes.io/component": "database",
+        "app.kubernetes.io/instance": "inventory",
+        "app.kubernetes.io/managed-by": "cloudnative-pg",
+        "app.kubernetes.io/name": "postgresql",
+        "app.kubernetes.io/version": "18",
+        "cnpg.io/cluster": "inventory"
+      },
+      "name": "inventory-r",
+      "namespace": "cnpg-watch-e2e-other",
+      "ownerReferences": [
+        {
+          "apiVersion": "postgresql.cnpg.io/v1",
+          "controller": true,
+          "kind": "Cluster",
+          "name": "inventory",
+          "uid": "uid-21361c98de19354f"
+        }
+      ],
+      "uid": "uid-93a3017743e26e26"
+    },
+    "spec": {
+      "selector": {
+        "cnpg.io/cluster": "inventory",
+        "cnpg.io/podRole": "instance"
+      }
+    }
+  },
+  {
+    "metadata": {
+      "creationTimestamp": "2026-11-15T08:33:13Z",
+      "labels": {
+        "app.kubernetes.io/component": "database",
+        "app.kubernetes.io/instance": "inventory",
+        "app.kubernetes.io/managed-by": "cloudnative-pg",
+        "app.kubernetes.io/name": "postgresql",
+        "app.kubernetes.io/version": "18",
+        "cnpg.io/cluster": "inventory"
+      },
+      "name": "inventory-ro",
+      "namespace": "cnpg-watch-e2e-other",
+      "ownerReferences": [
+        {
+          "apiVersion": "postgresql.cnpg.io/v1",
+          "controller": true,
+          "kind": "Cluster",
+          "name": "inventory",
+          "uid": "uid-21361c98de19354f"
+        }
+      ],
+      "uid": "uid-29912b50e684b18a"
+    },
+    "spec": {
+      "selector": {
+        "cnpg.io/cluster": "inventory",
+        "cnpg.io/instanceRole": "replica"
+      }
+    }
+  },
+  {
+    "metadata": {
+      "creationTimestamp": "2026-11-15T08:33:13Z",
+      "labels": {
+        "app.kubernetes.io/component": "database",
+        "app.kubernetes.io/instance": "inventory",
+        "app.kubernetes.io/managed-by": "cloudnative-pg",
+        "app.kubernetes.io/name": "postgresql",
+        "app.kubernetes.io/version": "18",
+        "cnpg.io/cluster": "inventory"
+      },
+      "name": "inventory-rw",
+      "namespace": "cnpg-watch-e2e-other",
+      "ownerReferences": [
+        {
+          "apiVersion": "postgresql.cnpg.io/v1",
+          "controller": true,
+          "kind": "Cluster",
+          "name": "inventory",
+          "uid": "uid-21361c98de19354f"
+        }
+      ],
+      "uid": "uid-08f71492e0d236e9"
+    },
+    "spec": {
+      "selector": {
+        "cnpg.io/cluster": "inventory",
+        "cnpg.io/instanceRole": "primary"
+      }
+    }
+  },
+  {
+    "metadata": {
+      "creationTimestamp": "2026-11-15T08:33:14Z",
+      "labels": {
+        "app.kubernetes.io/component": "pooler",
+        "app.kubernetes.io/instance": "payments",
+        "app.kubernetes.io/managed-by": "cloudnative-pg",
+        "app.kubernetes.io/name": "postgresql",
+        "cnpg.io/cluster": "payments",
+        "cnpg.io/podRole": "pooler",
+        "cnpg.io/poolerName": "payments-pool"
+      },
+      "name": "payments-pool",
+      "namespace": "cnpg-watch-e2e",
+      "ownerReferences": [
+        {
+          "apiVersion": "postgresql.cnpg.io/v1",
+          "blockOwnerDeletion": true,
+          "controller": true,
+          "kind": "Pooler",
+          "name": "payments-pool",
+          "uid": "uid-faeabc3de0c56bbe"
+        }
+      ],
+      "uid": "uid-69704c0d8e49302a"
+    },
+    "spec": {
+      "selector": {
+        "cnpg.io/poolerName": "payments-pool"
+      }
+    }
+  },
+  {
+    "metadata": {
+      "creationTimestamp": "2026-11-15T08:32:17Z",
+      "labels": {
+        "app.kubernetes.io/component": "database",
+        "app.kubernetes.io/instance": "payments",
+        "app.kubernetes.io/managed-by": "cloudnative-pg",
+        "app.kubernetes.io/name": "postgresql",
+        "app.kubernetes.io/version": "18",
+        "cnpg.io/cluster": "payments"
+      },
+      "name": "payments-r",
+      "namespace": "cnpg-watch-e2e",
+      "ownerReferences": [
+        {
+          "apiVersion": "postgresql.cnpg.io/v1",
+          "controller": true,
+          "kind": "Cluster",
+          "name": "payments",
+          "uid": "uid-f5ad2c6b5c27042e"
+        }
+      ],
+      "uid": "uid-325a132df73070ba"
+    },
+    "spec": {
+      "selector": {
+        "cnpg.io/cluster": "payments",
+        "cnpg.io/podRole": "instance"
+      }
+    }
+  },
+  {
+    "metadata": {
+      "creationTimestamp": "2026-11-15T08:32:17Z",
+      "labels": {
+        "app.kubernetes.io/component": "database",
+        "app.kubernetes.io/instance": "payments",
+        "app.kubernetes.io/managed-by": "cloudnative-pg",
+        "app.kubernetes.io/name": "postgresql",
+        "app.kubernetes.io/version": "18",
+        "cnpg.io/cluster": "payments"
+      },
+      "name": "payments-ro",
+      "namespace": "cnpg-watch-e2e",
+      "ownerReferences": [
+        {
+          "apiVersion": "postgresql.cnpg.io/v1",
+          "controller": true,
+          "kind": "Cluster",
+          "name": "payments",
+          "uid": "uid-f5ad2c6b5c27042e"
+        }
+      ],
+      "uid": "uid-8d0075b934b43ee4"
+    },
+    "spec": {
+      "selector": {
+        "cnpg.io/cluster": "payments",
+        "cnpg.io/instanceRole": "replica"
+      }
+    }
+  },
+  {
+    "metadata": {
+      "creationTimestamp": "2026-11-15T08:32:17Z",
+      "labels": {
+        "app.kubernetes.io/component": "database",
+        "app.kubernetes.io/instance": "payments",
+        "app.kubernetes.io/managed-by": "cloudnative-pg",
+        "app.kubernetes.io/name": "postgresql",
+        "app.kubernetes.io/version": "18",
+        "cnpg.io/cluster": "payments"
+      },
+      "name": "payments-rw",
+      "namespace": "cnpg-watch-e2e",
+      "ownerReferences": [
+        {
+          "apiVersion": "postgresql.cnpg.io/v1",
+          "controller": true,
+          "kind": "Cluster",
+          "name": "payments",
+          "uid": "uid-f5ad2c6b5c27042e"
+        }
+      ],
+      "uid": "uid-25933ec47dc1c5dc"
+    },
+    "spec": {
+      "selector": {
+        "cnpg.io/cluster": "payments",
+        "cnpg.io/instanceRole": "primary"
+      }
+    }
+  }
+]

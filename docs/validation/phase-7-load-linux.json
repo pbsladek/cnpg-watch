@@ -1,0 +1,33 @@
+{
+  "accepted_log_lines": 307200,
+  "arch": "aarch64",
+  "cache_high_bytes": 362714,
+  "dropped_log_lines": 0,
+  "input_p95_us": 97249,
+  "input_p99_us": 100421,
+  "live_tasks_after_shutdown": 0,
+  "log_high_bytes": 8388120,
+  "os": "linux",
+  "pooler_completions": 24,
+  "queued_high_bytes": 541184,
+  "render_count": 601,
+  "rss_max_kib": 14872,
+  "rss_samples_kib": [
+    6632,
+    14632,
+    14684,
+    14684,
+    14688,
+    14724,
+    14748,
+    14768,
+    14852,
+    14852,
+    14852,
+    14872
+  ],
+  "scenario": "100 clusters/300 instances/2 pooler pods, 1000 topology updates/s, 5120 log lines/s using production framing/redaction/retention, bounded timeline projection, operational health and queued/admitted/reduced PgBouncer samples, production responsive dashboard, TestBackend 120x40",
+  "scope_churns": 5,
+  "seconds": 60,
+  "view_render_p95_us": 3613
+}

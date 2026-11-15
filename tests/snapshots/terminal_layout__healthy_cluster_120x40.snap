@@ -1,0 +1,44 @@
+---
+source: tests/terminal_layout.rs
+assertion_line: 191
+expression: "render(&content(name), w, h)"
+---
+cnpg-watch | ctx fixture | ns app-db | Incident | reduced 0
+app-db/payments > Instances | scope 1 | SQL Available
+┌Health / evidence─────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│No current findings; direct SQL current                                                                               │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+┌Instances─────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│instance                     role       ready   LSN            lag            sample                                  │
+│payments-1                   primary    yes     0/100          not-applicable fresh 0s                                │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+│                                                                                                                      │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+┌Poolers───────────────────────────────────────────────────┐┌Recent events─────────────────────────────────────────────┐
+│payments-pool: waiting 0; stats current                   ││app-db/payments: Normal: reconciliation completed         │
+│                                                          ││                                                          │
+│                                                          ││                                                          │
+│                                                          ││                                                          │
+│                                                          ││                                                          │
+│                                                          ││                                                          │
+└──────────────────────────────────────────────────────────┘└──────────────────────────────────────────────────────────┘
+evidence remains bounded; i inspects selected row
+
+Instances | Enter related | i detail | Esc back | q quit

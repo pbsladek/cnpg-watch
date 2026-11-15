@@ -1,0 +1,15 @@
+{
+  "cluster_adapter": 510.5345340995441,
+  "pipeline/render_100x30/10": 35014.56248236332,
+  "pipeline/render_100x30/100": 34786.350867521374,
+  "pipeline/render_100x30/1000": 35780.83675515417,
+  "pipeline/render_120x40/10": 47681.0473839717,
+  "pipeline/render_120x40/100": 47797.04390037594,
+  "pipeline/render_120x40/1000": 48235.913770902305,
+  "pipeline/unchanged_reduce/10": 80.7465962912001,
+  "pipeline/unchanged_reduce/100": 85.24657395317759,
+  "pipeline/unchanged_reduce/1000": 88.72845378121595,
+  "pipeline/view/10": 682.2632599393128,
+  "pipeline/view/100": 2804.434753402217,
+  "pipeline/view/1000": 25625.136375086262
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "cells": [
+    {
+      "id": "k8s134",
+      "k3s_image": "rancher/k3s:v1.34.8-k3s1",
+      "server_version": "v1.34.8+k3s1",
+      "exec_allowed": {
+        "get_only": true,
+        "create_only": false,
+        "both": true,
+        "neither": false
+      }
+    },
+    {
+      "id": "k8s135",
+      "k3s_image": "rancher/k3s:v1.35.5-k3s1",
+      "server_version": "v1.35.5+k3s1",
+      "exec_allowed": {
+        "get_only": false,
+        "create_only": false,
+        "both": true,
+        "neither": false
+      }
+    },
+    {
+      "id": "k8s136",
+      "k3s_image": "rancher/k3s:v1.36.1-k3s1",
+      "server_version": "v1.36.1+k3s1",
+      "exec_allowed": {
+        "get_only": false,
+        "create_only": false,
+        "both": true,
+        "neither": false
+      }
+    }
+  ]
+}

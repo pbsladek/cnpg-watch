@@ -1,0 +1,29 @@
+{
+  "archive": {
+    "archived_count": 7,
+    "failed_count": 0,
+    "last_archived_time": null,
+    "last_failed_time": null,
+    "stats_reset": "2026-11-14T00:00:00Z"
+  },
+  "current": "0/7000000",
+  "current_user": "watch_monitor",
+  "in_recovery": false,
+  "last_replayed_transaction_age_ms": null,
+  "monitor": true,
+  "peers": [
+    {
+      "address": "192.0.2.11",
+      "application": "payments-2",
+      "replay": "0/7000000"
+    }
+  ],
+  "received": null,
+  "replay": null,
+  "server_time": "2026-11-14T00:00:00Z",
+  "server_version": 180004,
+  "session_user": "watch_monitor",
+  "superuser": false,
+  "system_id": "42",
+  "timeline": 1
+}

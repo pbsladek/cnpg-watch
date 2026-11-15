@@ -1,0 +1,20 @@
+[
+  {
+    "apiVersion": "postgresql.cnpg.io/v1",
+    "kind": "ImageCatalog",
+    "metadata": {
+      "namespace": "cnpg-watch-e2e",
+      "name": "watch-fixture-images",
+      "uid": "0d7168d5-898a-410c-98fd-6e1a9d809f94",
+      "generation": 1
+    },
+    "spec": {
+      "images": [
+        {
+          "image": "ghcr.io/cloudnative-pg/postgresql:18.4",
+          "major": 18
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "scenario": "actual release TUI, standard profile, 1 cluster/2 instances, pooler stats True, quiescent watches",
+  "observed_pooler_stats": true,
+  "elapsed_seconds": 10.032653417001711,
+  "cpu_percent_one_core": 0.49837264302650097,
+  "rss_kib": 22432
+}

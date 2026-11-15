@@ -1,0 +1,6 @@
+{
+  "scenario": "actual release TUI, minimal profile, 1 cluster/2 instances, quiescent watches",
+  "elapsed_seconds": 10.041466416994808,
+  "cpu_percent_one_core": 0.1991740963864675,
+  "rss_kib": 15088
+}

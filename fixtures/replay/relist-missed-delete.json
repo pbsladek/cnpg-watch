@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "events": [
+    {"scope":0,"watch":0,"kind":"Pod","update":"Init"},
+    {"scope":0,"watch":0,"kind":"Pod","update":{"InitApply":{"Pod":{"id":{"key":{"namespace":"app-db","name":"payments-1"},"uid":"pod-1"},"cluster":{"namespace":"app-db","name":"payments"},"role":"Primary","ready":true,"restarts":0,"address":null}}}},
+    {"scope":0,"watch":0,"kind":"Pod","update":"InitDone"},
+    {"scope":0,"watch":0,"kind":"Pod","update":"Init"},
+    {"scope":0,"watch":0,"kind":"Pod","update":{"Error":"Transport"}},
+    {"scope":0,"watch":0,"kind":"Pod","update":"InitDone"},
+    {"scope":0,"watch":1,"kind":"Pod","update":"Init"},
+    {"scope":0,"watch":1,"kind":"Pod","update":"InitDone"}
+  ],
+  "expected_pods": [0,0,1,1,1,1,1,0]
+}

@@ -1,0 +1,175 @@
+{
+  "groupVersion": "postgresql.cnpg.io/v1",
+  "resources": [
+    {
+      "name": "databases",
+      "singularName": "database",
+      "namespaced": true,
+      "kind": "Database",
+      "verbs": [
+        "delete",
+        "deletecollection",
+        "get",
+        "list",
+        "patch",
+        "create",
+        "update",
+        "watch"
+      ],
+      "storageVersionHash": "uy7mh3muTJs="
+    },
+    {
+      "name": "failoverquorums",
+      "singularName": "failoverquorum",
+      "namespaced": true,
+      "kind": "FailoverQuorum",
+      "verbs": [
+        "delete",
+        "deletecollection",
+        "get",
+        "list",
+        "patch",
+        "create",
+        "update",
+        "watch"
+      ],
+      "storageVersionHash": "SkDsu4vmqKI="
+    },
+    {
+      "name": "subscriptions",
+      "singularName": "subscription",
+      "namespaced": true,
+      "kind": "Subscription",
+      "verbs": [
+        "delete",
+        "deletecollection",
+        "get",
+        "list",
+        "patch",
+        "create",
+        "update",
+        "watch"
+      ],
+      "storageVersionHash": "MceYE1NBfJg="
+    },
+    {
+      "name": "databaseroles",
+      "singularName": "databaserole",
+      "namespaced": true,
+      "kind": "DatabaseRole",
+      "verbs": [
+        "delete",
+        "deletecollection",
+        "get",
+        "list",
+        "patch",
+        "create",
+        "update",
+        "watch"
+      ],
+      "storageVersionHash": "pBBBxtGHOWI="
+    },
+    {
+      "name": "imagecatalogs",
+      "singularName": "imagecatalog",
+      "namespaced": true,
+      "kind": "ImageCatalog",
+      "verbs": [
+        "delete",
+        "deletecollection",
+        "get",
+        "list",
+        "patch",
+        "create",
+        "update",
+        "watch"
+      ],
+      "storageVersionHash": "vaYL7q/q2q8="
+    },
+    {
+      "name": "publications",
+      "singularName": "publication",
+      "namespaced": true,
+      "kind": "Publication",
+      "verbs": [
+        "delete",
+        "deletecollection",
+        "get",
+        "list",
+        "patch",
+        "create",
+        "update",
+        "watch"
+      ],
+      "storageVersionHash": "UBSEDVtDw8I="
+    },
+    {
+      "name": "backups",
+      "singularName": "backup",
+      "namespaced": true,
+      "kind": "Backup",
+      "verbs": [
+        "delete",
+        "deletecollection",
+        "get",
+        "list",
+        "patch",
+        "create",
+        "update",
+        "watch"
+      ],
+      "storageVersionHash": "cjfAWS+YWIU="
+    },
+    {
+      "name": "clusterimagecatalogs",
+      "singularName": "clusterimagecatalog",
+      "namespaced": false,
+      "kind": "ClusterImageCatalog",
+      "verbs": [
+        "delete",
+        "deletecollection",
+        "get",
+        "list",
+        "patch",
+        "create",
+        "update",
+        "watch"
+      ],
+      "storageVersionHash": "sfzptQDX0as="
+    },
+    {
+      "name": "poolers",
+      "singularName": "pooler",
+      "namespaced": true,
+      "kind": "Pooler",
+      "verbs": [
+        "delete",
+        "deletecollection",
+        "get",
+        "list",
+        "patch",
+        "create",
+        "update",
+        "watch"
+      ],
+      "storageVersionHash": "1OtdPaVwIEo="
+    },
+    {
+      "name": "scheduledbackups",
+      "singularName": "scheduledbackup",
+      "namespaced": true,
+      "kind": "ScheduledBackup",
+      "verbs": [
+        "delete",
+        "deletecollection",
+        "get",
+        "list",
+        "patch",
+        "create",
+        "update",
+        "watch"
+      ],
+      "storageVersionHash": "xR3z8HySwx0="
+    }
+  ]
+}

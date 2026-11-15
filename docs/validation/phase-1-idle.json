@@ -1,0 +1,7 @@
+{
+  "scenario": "actual release TUI, minimal profile, 1 cluster/2 instances, quiescent watches",
+  "elapsed_seconds": 10.015975665999576,
+  "cpu_percent_one_core": 0.09984049815482474,
+  "rss_kib": 14576,
+  "notes": "Measured locally on macOS 27.2.1 arm64, Rust 1.94.1. Synthetic pipeline and actual idle scenarios are separate; see phase-1.md."
+}

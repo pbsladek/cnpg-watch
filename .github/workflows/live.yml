@@ -1,0 +1,70 @@
+name: live-and-load
+on:
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: '31 8 * * *'
+permissions:
+  contents: read
+jobs:
+  e2e-k3d:
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        cell: [k8s134, k8s135, k8s136]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    env:
+      E2E_MATRIX_CELL: ${{ matrix.cell }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@1.94.1
+      - name: Install checksum-verified fixture tools
+        run: |
+          ./scripts/install-e2e-tools.sh
+          echo "$PWD/artifacts/tools/bin" >> "$GITHUB_PATH"
+      - name: Verify cleanup on injected failure
+        if: matrix.cell == 'k8s135'
+        run: python3 scripts/check-cleanup.py
+      - run: make test-live E2E_SUITE=operations
+      - name: Upload public qualification receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-receipts-${{ matrix.cell }}
+          path: |
+            artifacts/e2e/**/run.json
+            artifacts/e2e/**/kubernetes-version.json
+            artifacts/e2e/**/terminal-live.json
+            artifacts/phase7/exec-*.json
+      - name: Upload redacted diagnostics only
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-diagnostics-${{ matrix.cell }}
+          path: |
+            artifacts/e2e/**/*.txt
+            artifacts/e2e/**/*.log
+            artifacts/e2e/**/state.yaml
+            artifacts/e2e/**/run.json
+            artifacts/e2e/**/kubernetes-version.json
+          retention-days: 7
+  load:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@1.94.1
+      - run: make test-load
+      - if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: make test-soak
+      - if: github.event_name == 'schedule'
+        run: |
+          PROPTEST_CASES=4096 make test-replay
+          PROPTEST_CASES=4096 INSTA_UPDATE=no INSTA_FORCE_PASS=0 cargo test --locked --test terminal_layout
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: performance
+          path: artifacts/performance/*.json

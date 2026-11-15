@@ -1,0 +1,27 @@
+[
+  {
+    "apiVersion": "postgresql.cnpg.io/v1",
+    "kind": "Backup",
+    "metadata": {
+      "namespace": "cnpg-watch-e2e",
+      "name": "payments-unavailable-plugin",
+      "uid": "86976e98-bbd4-4246-ad94-e56d53436633",
+      "generation": 1
+    },
+    "spec": {
+      "cluster": {
+        "name": "payments"
+      },
+      "method": "plugin",
+      "pluginConfiguration": {
+        "name": "unavailable-fixture-plugin"
+      }
+    },
+    "status": {
+      "error": "cannot proceed with the backup as the cluster has no plugin configured",
+      "method": "plugin",
+      "phase": "failed",
+      "reconciliationTerminatedAt": "2026-11-15T18:32:51Z"
+    }
+  }
+]

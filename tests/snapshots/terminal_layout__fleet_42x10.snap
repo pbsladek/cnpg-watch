@@ -1,0 +1,14 @@
+---
+source: tests/terminal_layout.rs
+assertion_line: 191
+expression: "render(&content(name), w, h)"
+---
+cnpg-watch | ctx fixture | ns app-db | Inc
+app-db/payments > Fleet | scope 1 | SQL Av
+┌Fleet───────────────────────────────────┐
+│cluster          state / details        │
+│app-db/payments  Ready | 3/3 | sampled 0│
+│                                        │
+└────────────────────────────────────────┘
+Compact; i detail | evidence remains bound
+Instances | Enter related | i detail | Esc

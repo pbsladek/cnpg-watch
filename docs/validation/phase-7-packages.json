@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "version": "0.1.0",
+  "published": false,
+  "hosted_ci": "not run; no remote configured",
+  "packages": [
+    {
+      "schema_version": 1,
+      "target": "aarch64-apple-darwin",
+      "archive": "cnpg-watch-0.1.0-darwin-arm64.tar.gz",
+      "archive_sha256": "ae134c285782572509dc155aa220c4f2c5b01d6ec1a1b5f948afa9dbe6413b43",
+      "execution": "native local host",
+      "cli_checks": [
+        "help",
+        "info schema 1 and target OS/architecture",
+        "all five completions",
+        "command reference",
+        "manifest hashes and modes"
+      ],
+      "terminal_checks": [
+        "real binary startup against local API stub",
+        "resize/help",
+        "q",
+        "Ctrl-C",
+        "error restoration"
+      ],
+      "cluster_fixture": "local API stub; live compatibility tested separately",
+      "passed": true,
+      "manifest_sha256": "a8a5fd6df2c3235e5c92ebc636e11a4baa6077f2e5e1a9e9ab9e44965a5e2f27",
+      "binary_sha256": "c2060c1beb65ef601380e601b0c48dc76decb74ed4eaa186d2a01b024c96cc36",
+      "source_matches_final_rust": true
+    },
+    {
+      "schema_version": 1,
+      "target": "x86_64-apple-darwin",
+      "archive": "cnpg-watch-0.1.0-darwin-amd64.tar.gz",
+      "archive_sha256": "fe523594053ecdace32c5891dcb53d268859e3c654536e4fb99378bb67cc1680",
+      "execution": "Rosetta x86_64 on macOS arm64",
+      "cli_checks": [
+        "help",
+        "info schema 1 and target OS/architecture",
+        "all five completions",
+        "command reference",
+        "manifest hashes and modes"
+      ],
+      "terminal_checks": [
+        "real binary startup against local API stub",
+        "resize/help",
+        "q",
+        "Ctrl-C",
+        "error restoration"
+      ],
+      "cluster_fixture": "local API stub; live compatibility tested separately",
+      "passed": true,
+      "manifest_sha256": "b58b082c5ad01af4cc7f60ce9d2f0d2282ed4c19cfd47f6af3f295ca0deeffab",
+      "binary_sha256": "1043813384bac397f4dab5a4f1fa8fab3312c7a1350096e279e92293ef83912b",
+      "source_matches_final_rust": true
+    },
+    {
+      "schema_version": 1,
+      "target": "aarch64-unknown-linux-musl",
+      "archive": "cnpg-watch-0.1.0-linux-arm64.tar.gz",
+      "archive_sha256": "8dabddd50492e852167fab724f0bf8fea821775552e627a24e4417205c81a27f",
+      "execution": "native Linux arm64 Docker VM",
+      "cli_checks": [
+        "help",
+        "info schema 1 and target OS/architecture",
+        "all five completions",
+        "command reference",
+        "manifest hashes and modes"
+      ],
+      "terminal_checks": [
+        "real binary startup against local API stub",
+        "resize/help",
+        "q",
+        "Ctrl-C",
+        "error restoration"
+      ],
+      "cluster_fixture": "local API stub; live compatibility tested separately",
+      "passed": true,
+      "manifest_sha256": "7d60a1fa971c573e35996b5c0d57513a71450a0f8e22fc3c68464f61e88e7ffc",
+      "binary_sha256": "6616d65575815b785907b60db640e973d29311d5bcc52772dd0ad7ffdf819088",
+      "source_matches_final_rust": true
+    },
+    {
+      "schema_version": 1,
+      "target": "x86_64-unknown-linux-musl",
+      "archive": "cnpg-watch-0.1.0-linux-amd64.tar.gz",
+      "archive_sha256": "8d4d8962cb3a9327a28632851ea770fedd93609c5048fcda542237454beadb68",
+      "execution": "Linux x86_64 through Docker/QEMU",
+      "cli_checks": [
+        "help",
+        "info schema 1 and target OS/architecture",
+        "all five completions",
+        "command reference",
+        "manifest hashes and modes"
+      ],
+      "terminal_checks": [
+        "real binary startup against local API stub",
+        "resize/help",
+        "q",
+        "Ctrl-C",
+        "error restoration"
+      ],
+      "cluster_fixture": "local API stub; live compatibility tested separately",
+      "passed": true,
+      "manifest_sha256": "4b302c9f420c5231c5d1952cfa257f5a53862398b0a9e8347e18a69f15aee9a2",
+      "binary_sha256": "5daa566c68d6d499ec2a320fedf914b34a1da21936066da2f071ce64c88b21e7",
+      "source_matches_final_rust": true
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "accepted_log_lines": 307200,
+  "arch": "aarch64",
+  "cache_high_bytes": 130000,
+  "dropped_log_lines": 0,
+  "input_p95_us": 97371,
+  "input_p99_us": 100280,
+  "live_tasks_after_shutdown": 0,
+  "os": "macos",
+  "queued_high_bytes": 233472,
+  "render_count": 601,
+  "rss_max_kib": 14032,
+  "rss_samples_kib": [
+    8512,
+    13936,
+    13952,
+    13952,
+    13952,
+    13952,
+    13984,
+    13984,
+    13984,
+    13984,
+    14000,
+    14032
+  ],
+  "scenario": "synthetic pipeline: 100 clusters/300 instances, 1000 topology updates/s, 5120 log lines/s, TestBackend 120x40",
+  "scope_churns": 5,
+  "seconds": 60,
+  "view_render_p95_us": 340
+}

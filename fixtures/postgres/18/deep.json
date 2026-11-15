@@ -1,0 +1,76 @@
+{
+  "autovacuum_workers": 0,
+  "blockers": [],
+  "connections": {
+    "active": 0,
+    "clients": 0,
+    "idle_in_transaction": 0,
+    "max_connections": 30,
+    "reserved": 0,
+    "super_reserved": 3
+  },
+  "current_user": "watch_monitor",
+  "in_recovery": false,
+  "long_transactions": [
+    {
+      "backend_type": "walsender",
+      "pid": 892,
+      "query_age_ms": 524139,
+      "query_text": null,
+      "state": "active",
+      "wait_event": "WalSenderMain",
+      "wait_event_type": "Activity",
+      "xact_age_ms": null
+    }
+  ],
+  "monitor": true,
+  "schema_version": 1,
+  "server_time": "2026-11-15T00:00:00Z",
+  "server_version": 180004,
+  "session_user": "watch_monitor",
+  "superuser": false,
+  "system_id": "42",
+  "timeline": 1,
+  "waits": [
+    {
+      "count": 3,
+      "wait_event": "IoWorkerMain",
+      "wait_event_type": "Activity"
+    },
+    {
+      "count": 1,
+      "wait_event": "ArchiverMain",
+      "wait_event_type": "Activity"
+    },
+    {
+      "count": 1,
+      "wait_event": "AutovacuumMain",
+      "wait_event_type": "Activity"
+    },
+    {
+      "count": 1,
+      "wait_event": "BgwriterHibernate",
+      "wait_event_type": "Activity"
+    },
+    {
+      "count": 1,
+      "wait_event": "CheckpointerMain",
+      "wait_event_type": "Activity"
+    },
+    {
+      "count": 1,
+      "wait_event": "LogicalLauncherMain",
+      "wait_event_type": "Activity"
+    },
+    {
+      "count": 1,
+      "wait_event": "WalSenderMain",
+      "wait_event_type": "Activity"
+    },
+    {
+      "count": 1,
+      "wait_event": "WalWriterMain",
+      "wait_event_type": "Activity"
+    }
+  ]
+}

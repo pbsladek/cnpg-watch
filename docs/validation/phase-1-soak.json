@@ -1,0 +1,21 @@
+{
+  "accepted_log_lines": 9216000,
+  "arch": "aarch64",
+  "cache_high_bytes": 130000,
+  "dropped_log_lines": 0,
+  "input_p95_us": 96719,
+  "input_p99_us": 100522,
+  "live_tasks_after_shutdown": 0,
+  "os": "macos",
+  "queued_high_bytes": 233472,
+  "render_count": 18001,
+  "rss_max_kib": 14672,
+  "scenario": "synthetic pipeline: 100 clusters/300 instances, 1000 topology updates/s, 5120 log lines/s, TestBackend 120x40",
+  "scope_churns": 179,
+  "seconds": 1800,
+  "view_render_p95_us": 348,
+  "rss_sample_count": 360,
+  "rss_first_kib": 8576,
+  "rss_last_kib": 14672,
+  "notes": "Measured locally on macOS 27.2.1 arm64, Rust 1.94.1. Synthetic pipeline and actual idle scenarios are separate; see phase-1.md."
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "apiVersion": "postgresql.cnpg.io/v1",
+    "kind": "DatabaseRole",
+    "metadata": {
+      "namespace": "cnpg-watch-e2e",
+      "name": "watch-fixture-role",
+      "uid": "d339696e-8701-4c88-b4f5-c16c29cd0df6",
+      "generation": 3
+    },
+    "spec": {
+      "cluster": {
+        "name": "payments"
+      },
+      "connectionLimit": -1,
+      "databaseRoleReclaimPolicy": "retain",
+      "ensure": "present",
+      "inherit": true,
+      "login": false,
+      "name": "watch_fixture"
+    },
+    "status": {
+      "applied": true,
+      "observedGeneration": 3
+    }
+  }
+]

@@ -1,0 +1,56 @@
+[package]
+name = "cnpg-watch"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.94.1"
+description = "A bounded, observe-only terminal dashboard for CloudNativePG"
+license = "MIT"
+
+[dependencies]
+anyhow = "1"
+chrono = { version = "0.4", features = ["serde"] }
+clap = { version = "4.6", features = ["derive", "env"] }
+clap_complete = "4.6"
+crossterm = { version = "0.29", features = ["event-stream", "use-dev-tty"] }
+directories = "6"
+futures = "0.3"
+humantime = "2"
+kube = { version = "=5.0.0", default-features = false, features = ["client", "runtime", "rustls-tls", "ring", "ws"] }
+k8s-openapi = { version = "0.29", features = ["v1_35"] }
+ratatui = { version = "0.30", default-features = false, features = ["crossterm", "layout-cache"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+serde_yaml = { package = "serde_yaml_ng", version = "0.10" }
+thiserror = "2"
+tokio = { version = "1.54", features = ["macros", "rt-multi-thread", "signal", "sync", "time", "io-util", "fs"] }
+tokio-util = { version = "0.7", features = ["rt"] }
+toml = "1"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+secrecy = "0.10"
+regex = "1"
+csv = "1.4"
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls", "stream"] }
+x509-parser = "0.18"
+sha2 = "0.10"
+tower = { version = "0.5", features = ["limit"] }
+
+[dev-dependencies]
+portable-pty = "0.9"
+vt100 = "0.18"
+insta = { version = "1", default-features = false }
+http = "1"
+tower = { version = "0.5", features = ["util"] }
+tokio = { version = "1.54", features = ["test-util"] }
+proptest = "1"
+tempfile = "3"
+criterion = { version = "0.8", default-features = false, features = ["cargo_bench_support"] }
+
+[[bench]]
+name = "pipeline"
+harness = false
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = "debuginfo"

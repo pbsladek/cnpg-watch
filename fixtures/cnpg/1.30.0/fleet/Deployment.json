@@ -1,0 +1,29 @@
+[
+  {
+    "metadata": {
+      "creationTimestamp": "2026-11-15T08:32:06Z",
+      "labels": {
+        "app.kubernetes.io/name": "cloudnative-pg"
+      },
+      "name": "cnpg-controller-manager",
+      "namespace": "cnpg-system",
+      "uid": "uid-6a32bfd0a4ff6d88"
+    },
+    "spec": {
+      "replicas": 1,
+      "template": {
+        "spec": {
+          "containers": [
+            {
+              "image": "ghcr.io/cloudnative-pg/cloudnative-pg:1.30.0",
+              "name": "manager"
+            }
+          ]
+        }
+      }
+    },
+    "status": {
+      "readyReplicas": 1
+    }
+  }
+]

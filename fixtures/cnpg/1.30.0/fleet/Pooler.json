@@ -1,0 +1,23 @@
+[
+  {
+    "apiVersion": "postgresql.cnpg.io/v1",
+    "kind": "Pooler",
+    "metadata": {
+      "creationTimestamp": "2026-11-15T08:33:13Z",
+      "name": "payments-pool",
+      "namespace": "cnpg-watch-e2e",
+      "uid": "uid-faeabc3de0c56bbe"
+    },
+    "spec": {
+      "cluster": {
+        "name": "payments"
+      },
+      "instances": 1,
+      "type": "rw"
+    },
+    "status": {
+      "instances": 1,
+      "phase": "active"
+    }
+  }
+]
